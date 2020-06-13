@@ -1,0 +1,25 @@
+[package]
+name = "withinbot"
+version = "0.1.0"
+authors = ["Christine Dodrill <me@christine.website>"]
+edition = "2018"
+license-file = "LICENSE"
+description = "A bot for Within"
+homepage = "https://github.com/Xe/withinbot"
+repository = "https://github.com/Xe/withinbot"
+readme = "README.md"
+
+[dependencies]
+anyhow = "1"
+furbooru = "0.1"
+kankyo = "0.2"
+log = "0.4"
+pfacts = "0"
+pretty_env_logger = "0.4"
+reqwest = { version = "0.10", features = ["json"] }
+tokio = { version = "0.2", features = ["macros"] }
+
+[dependencies.serenity]
+git = "https://github.com/Lakelezz/serenity/"
+branch = "await"
+features = ["cache", "framework", "standard_framework", "gateway"]
