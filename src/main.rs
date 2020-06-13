@@ -15,7 +15,7 @@ use serenity::{
 };
 use std::{collections::HashSet, env, sync::Arc};
 
-use commands::{math::*, meta::*, owner::*};
+use commands::{math::*, meta::*, owner::*, printerfacts::*};
 
 struct ShardManagerContainer;
 
@@ -37,7 +37,7 @@ impl EventHandler for Handler {
 }
 
 #[group]
-#[commands(multiply, ping, quit)]
+#[commands(multiply, ping, quit, printerfact)]
 struct General;
 
 #[help]
@@ -95,6 +95,7 @@ async fn main() -> anyhow::Result<()> {
     {
         let mut data = client.data.write().await;
         data.insert::<ShardManagerContainer>(Arc::clone(&client.shard_manager));
+        data.insert::<FactsContainer>(commands::printerfacts::make());
     }
 
     let _owners = match client

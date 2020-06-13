@@ -1692,6 +1692,7 @@ dependencies = [
  "log",
  "pfacts",
  "pretty_env_logger",
+ "rand",
  "reqwest",
  "serenity",
  "tokio",

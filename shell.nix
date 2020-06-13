@@ -1,14 +1,27 @@
-let pkgs = import <nixpkgs> { };
-in pkgs.mkShell {
-  buildInputs = with pkgs; [
-    rustc
+let
+  sources = import ./nix/sources.nix;
+  pkgs = import sources.nixpkgs { };
+  niv = (import sources.niv { }).niv;
+in with pkgs;
+
+pkgs.mkShell {
+  nativeBuildInputs = [ removeReferencesTo ];
+  buildInputs = [
+    # rust dependencies
     cargo
-    rls
-    rustfmt
     cargo-watch
-    pkg-config
+    rls
+    rustc
+    rustfmt
+
+    # native dependencies
     openssl
+    pkg-config
     sqlite
+
+    # tooling
     niv
   ];
+
+  DATABASE_URL = "target/withinbot.db";
 }
