@@ -21,6 +21,7 @@ pkgs.mkShell {
 
     # tooling
     niv
+    diesel-cli
   ];
 
   DATABASE_URL = "target/withinbot.db";

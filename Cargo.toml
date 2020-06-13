@@ -11,7 +11,8 @@ readme = "README.md"
 
 [dependencies]
 anyhow = "1"
-furbooru = "0.1"
+diesel = { version = "1.4", features = ["sqlite"] }
+furbooru = "0.2"
 kankyo = "0.2"
 log = "0.4"
 pfacts = "0"
