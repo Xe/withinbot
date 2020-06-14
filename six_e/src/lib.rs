@@ -131,7 +131,8 @@ impl fmt::Display for Stats {
 mod tests {
     #[test]
     fn load_campaign() {
+        println!("loading...");
         let camp: super::types::Campaign = serde_dhall::from_file("../campaigns/Miau/package.dhall").parse().unwrap();
-        println!("{:?}", camp);
+        println!("loaded");
     }
 }

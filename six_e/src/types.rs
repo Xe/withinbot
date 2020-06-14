@@ -132,3 +132,10 @@ pub struct Roll {
     pub level: bool,
     pub plus: Option<i32>,
 }
+
+
+#[derive(Debug, Serialize, Deserialize)]
+pub struct WinCondition {
+    pub item: Item,
+    pub area: Area,
+}
