@@ -9,4 +9,5 @@
 , Range = ./Range.dhall
 , Roll = ./Roll.dhall
 , Stat = ./Stat.dhall
+, Species = ./Species.dhall
 }

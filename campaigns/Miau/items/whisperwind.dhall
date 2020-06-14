@@ -1,13 +1,13 @@
 let camp = ../../package.dhall
 
 in  camp.Item::{
-    , name = "Tol'kath's Battleaxe of Destruction"
+    , name = "Whisperwind"
     , description =
-        "A two-handed battleaxe for mauling enemies into a fine powder."
+        "Harness the whispers of the wind wherever you are with this legendary bow."
     , bonuses = [ camp.Bonus::{ amount = Some +4, stat = Some camp.Stat.ATK } ]
+    , weight = 2
     , kind = camp.ItemKind.Weapon
     , cost = 150
-    , weight = 3
-    , sellValue = Some 150
+    , sellValue = Some 90
     , legendary = True
     }

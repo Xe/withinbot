@@ -18,6 +18,13 @@ fn simple_roll(num: u32, sides: u32) -> i32 {
     res[0]
 }
 
+pub enum Species {
+    Human,
+    Feline,
+    Shark,
+    Cetacean,
+}
+
 pub struct Stats {
     pub name: String,
     pub class: String,

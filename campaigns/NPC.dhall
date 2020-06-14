@@ -1,6 +1,19 @@
 let Item = ./Item.dhall
 
-in  { Type = { name : Text, job : Text, sellItems : List Item.Type }
+let Species = ./Species.dhall
+
+in  { Type =
+        { name : Text
+        , job : Text
+        , sellItems : List Item.Type
+        , species : Species
+        , dialogue : List Text
+        }
     , default =
-      { name = "no name", job = "no job", sellItems = [] : List Item.Type }
+      { name = "no name"
+      , job = "no job"
+      , sellItems = [] : List Item.Type
+      , species = Species.Feline
+      , dialogue = [] : List Text
+      }
     }

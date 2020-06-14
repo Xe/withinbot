@@ -12,6 +12,7 @@ in  { Type =
         , monsters : List Monster.Type
         , npcs : List NPC.Type
         , items : List Item.Type
+        , kind : Text
         }
     , default =
       { name = "unnamed"
@@ -20,5 +21,6 @@ in  { Type =
       , monsters = [] : List Monster.Type
       , npcs = [] : List NPC.Type
       , items = [] : List Item.Type
+      , kind = ""
       }
     }
