@@ -15,7 +15,7 @@ use serenity::{
 };
 use std::{collections::HashSet, env, sync::Arc};
 
-use commands::{math::*, meta::*, owner::*, printerfacts::*};
+use commands::{math::*, meta::*, owner::*, printerfacts::*, six_e::*};
 
 struct ShardManagerContainer;
 
@@ -37,7 +37,7 @@ impl EventHandler for Handler {
 }
 
 #[group]
-#[commands(multiply, ping, quit, printerfact)]
+#[commands(multiply, ping, quit, printerfact, roll)]
 struct General;
 
 #[help]
