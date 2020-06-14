@@ -1,22 +1,31 @@
-use serenity::prelude::*;
+use dnd_dice_roller::dice::{Dice, RollType};
+use serenity::framework::standard::{macros::command, Args, CommandResult};
 use serenity::model::prelude::*;
-use serenity::framework::standard::{
-    Args, CommandResult,
-    macros::command,
-};
+use serenity::prelude::*;
 use std::str::FromStr;
-use dnd_dice_roller::dice::Dice;
 
 #[command]
 pub async fn roll(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     args.trimmed();
     let roll = args.message();
-    let dice = Dice::from_str(roll)?;
+    let mut dice = Dice::from_str(roll)?;
+    dice.roll_type = RollType::Advantage;
     let res = dice.roll_dice();
     let res = res.final_result;
     let reply = &format!("{}", res[0]);
 
     msg.channel_id.say(&ctx.http, reply).await?;
+
+    Ok(())
+}
+
+#[command]
+pub async fn roll_stats(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
+    let name: String = args.single_quoted::<String>().unwrap_or("no name".into());
+    let class: String = args.single_quoted::<String>().unwrap_or("rogue".into());
+
+    msg.reply(ctx, &format!("Your stats are: {}", six_e::Stats::new(name, class)))
+        .await?;
 
     Ok(())
 }

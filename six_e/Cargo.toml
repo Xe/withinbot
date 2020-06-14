@@ -1,0 +1,12 @@
+[package]
+name = "six_e"
+version = "0.1.0"
+authors = ["Christine Dodrill <me@christine.website>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1"
+dnd_dice_roller = "0.3"
+log = "0"

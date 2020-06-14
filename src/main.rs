@@ -37,7 +37,7 @@ impl EventHandler for Handler {
 }
 
 #[group]
-#[commands(multiply, ping, quit, printerfact, roll)]
+#[commands(multiply, ping, quit, printerfact, roll, roll_stats)]
 struct General;
 
 #[help]

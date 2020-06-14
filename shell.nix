@@ -2,6 +2,7 @@ let
   sources = import ./nix/sources.nix;
   pkgs = import sources.nixpkgs { };
   niv = (import sources.niv { }).niv;
+  dhall = import sources.easy-dhall-nix { };
 in with pkgs;
 
 pkgs.mkShell {
@@ -18,6 +19,10 @@ pkgs.mkShell {
     openssl
     pkg-config
     sqlite
+
+    # dhall
+    dhall.dhall-simple
+    dhall.dhall-json-simple
 
     # tooling
     niv
