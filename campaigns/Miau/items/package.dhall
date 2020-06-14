@@ -1,0 +1,26 @@
+[ ./amulet_of_bandacy.dhall
+, ./bane_of_lizards_shortsword.dhall
+, ./battleaxe.dhall
+, ./blessed_dagger_of_stabbing.dhall
+, ./boomerang.dhall
+, ./cactus_fruit.dhall
+, ./dagger.dhall
+, ./face_mask.dhall
+, ./flask.dhall
+, ./greatsword.dhall
+, ./hydroflask.dhall
+, ./iron_shield.dhall
+, ./light_armor.dhall
+, ./longbow.dhall
+, ./longsword.dhall
+, ./maiden_armor.dhall
+, ./ration.dhall
+, ./sand_robe.dhall
+, ./sandshoes.dhall
+, ./shield.dhall
+, ./shortsword.dhall
+, ./super_boomerang.dhall
+, ./sword_of_two_truths.dhall
+, ./tolkath_battleaxe.dhall
+, ./torch.dhall
+]
