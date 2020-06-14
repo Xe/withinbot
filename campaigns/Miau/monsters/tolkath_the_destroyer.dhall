@@ -10,4 +10,6 @@ in  camp.Monster::{
       [ camp.MonsterItem::{ item = ../items/amulet_of_bandacy.dhall }
       , camp.MonsterItem::{ item = ../items/tolkath_battleaxe.dhall }
       ]
+    , drops =
+      [ ../items/sandstorm_amulet.dhall, ../items/amulet_of_bandacy.dhall ]
     }

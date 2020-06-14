@@ -26,7 +26,11 @@ let weapons =
       , ./shield.dhall
       ]
 
-let trinkets = [ ./amulet_of_bandacy.dhall, ./mihari_amulet.dhall ]
+let trinkets =
+      [ ./amulet_of_bandacy.dhall
+      , ./mihari_amulet.dhall
+      , ./sandstorm_amulet.dhall
+      ]
 
 let consumables =
       [ ./cactus_fruit.dhall

@@ -1,6 +1,8 @@
 use dnd_dice_roller::dice::{Dice, RawResults, RollType};
 use std::fmt;
 
+pub mod types;
+
 fn roll2stat(roll: i32) -> i32 {
     match roll {
         12 | 11 => 2,
@@ -18,26 +20,40 @@ fn simple_roll(num: u32, sides: u32) -> i32 {
     res[0]
 }
 
-pub enum Species {
-    Human,
-    Feline,
-    Shark,
-    Cetacean,
-}
-
-pub struct Stats {
+/// A human player
+#[derive(Debug)]
+pub struct Player {
     pub name: String,
     pub class: String,
-    pub strength: i32,
-    pub dexterity: i32,
-    pub constitution: i32,
-    pub intelligence: i32,
-    pub wisdom: i32,
-    pub charisma: i32,
-    pub hp: u32,
-    pub armor: i32,
+    pub species: types::Species,
+    pub stats: Stats,
     pub exp: u32,
     pub level: u32,
+    pub armor: i32,
+}
+
+impl Player {
+    pub fn new(name: String, class: String) -> Self {
+        Player {
+            name: name,
+            class: class,
+            species: types::Species::Human,
+            stats: Stats::new(),
+            exp: 0,
+            level: 1,
+            armor: 0,
+        }
+    }
+}
+
+impl fmt::Display for Player {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        write!(
+            f,
+            "{} the level {} {} {}: {}, armor: {}, exp: {}",
+            self.name, self.level, self.species, self.class, self.stats, self.armor, self.exp
+        )
+    }
 }
 
 fn max_of_all_dice(data: RawResults) -> u32 {
@@ -56,8 +72,19 @@ fn max_of_all_dice(data: RawResults) -> u32 {
     *dice.iter().max().unwrap()
 }
 
+#[derive(Debug)]
+pub struct Stats {
+    pub strength: i32,
+    pub dexterity: i32,
+    pub constitution: i32,
+    pub intelligence: i32,
+    pub wisdom: i32,
+    pub charisma: i32,
+    pub hp: u32,
+}
+
 impl Stats {
-    pub fn new(name: String, class: String) -> Self {
+    pub fn new() -> Self {
         let constitution = roll2stat(simple_roll(2, 6));
         let dice = Dice::new(
             if constitution >= 0 {
@@ -73,8 +100,6 @@ impl Stats {
         log::debug!("HP roll: {:?}", result);
         let hp = max_of_all_dice(result.dice_results);
         Stats {
-            name: name,
-            class: class,
             strength: roll2stat(simple_roll(2, 6)),
             dexterity: roll2stat(simple_roll(2, 6)),
             constitution: constitution,
@@ -82,9 +107,6 @@ impl Stats {
             wisdom: roll2stat(simple_roll(2, 6)),
             charisma: roll2stat(simple_roll(2, 6)),
             hp: hp,
-            armor: 0,
-            exp: 0,
-            level: 1,
         }
     }
 }
@@ -93,7 +115,7 @@ impl fmt::Display for Stats {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         write!(
             f,
-            "{} str, {} dex, {} con, {} int, {} wis, {} cha, {} hp",
+            "STR: {}, DEX: {}, CON: {}, INT: {}, WIS: {}, CHA: {}, HP: {}",
             self.strength,
             self.dexterity,
             self.constitution,
@@ -108,7 +130,8 @@ impl fmt::Display for Stats {
 #[cfg(test)]
 mod tests {
     #[test]
-    fn it_works() {
-        assert_eq!(2 + 2, 4);
+    fn load_campaign() {
+        let camp: super::types::Campaign = serde_dhall::from_file("../campaigns/Miau/package.dhall").parse().unwrap();
+        println!("{:?}", camp);
     }
 }

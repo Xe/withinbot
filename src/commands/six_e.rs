@@ -21,10 +21,7 @@ pub async fn roll(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
 
 #[command]
 pub async fn roll_stats(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
-    let name: String = args.single_quoted::<String>().unwrap_or("no name".into());
-    let class: String = args.single_quoted::<String>().unwrap_or("rogue".into());
-
-    msg.reply(ctx, &format!("Your stats are: {}", six_e::Stats::new(name, class)))
+    msg.reply(ctx, &format!("Your stats are: {}", six_e::Stats::new()))
         .await?;
 
     Ok(())
