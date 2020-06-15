@@ -10,5 +10,6 @@
 , Roll = ./Roll.dhall
 , Stat = ./Stat.dhall
 , Species = ./Species.dhall
+, Spell = ./Spell.dhall
 , WinCondition = ./WinCondition.dhall
 }

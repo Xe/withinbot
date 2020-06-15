@@ -66,14 +66,12 @@ impl Player {
     }
 
     /// Calculate all buffs with items on stats.
-    pub fn with_buffs(&self) -> Stats {
+    pub fn with_buffs(&self, area_kind: String) -> Stats {
         let mut stats = self.stats.clone();
 
         for item in &self.inventory {
             for bonus in &item.bonuses {
-                if bonus.stat.is_some() && bonus.amount.is_some() {
-                    stats.add(bonus.stat.as_ref().unwrap(), bonus.amount.unwrap());
-                }
+                stats.add_bonus(&bonus, &area_kind)
             }
         }
 
@@ -161,9 +159,15 @@ impl Stats {
         };
     }
 
-    fn add_bonus(&mut self, bonus: &types::Bonus, area_kind: String) {
+    fn add_bonus(&mut self, bonus: &types::Bonus, area_kind: &String) {
         if bonus.stat.is_some() && bonus.amount.is_some() {
-            if bonus.area.is_some() {}
+            if bonus.area.is_some() {
+                if bonus.area.as_ref().unwrap() == area_kind {
+                    self.add(bonus.stat.as_ref().unwrap(), bonus.amount.unwrap())
+                }
+            } else {
+                self.add(bonus.stat.as_ref().unwrap(), bonus.amount.unwrap());
+            }
         }
     }
 }
