@@ -1,7 +1,8 @@
+use dnd_dice_roller::dice::{Dice, RollType};
 use serde::{Deserialize, Serialize};
 use std::fmt;
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Campaign {
     pub name: String,
@@ -148,6 +149,17 @@ pub struct Roll {
     pub min: Option<u32>,
     pub level: bool,
     pub plus: Option<i32>,
+}
+
+impl Into<Dice> for Roll {
+    fn into(self) -> Dice {
+        Dice::new(
+            self.dice_count.unwrap(),
+            self.dice_sides,
+            self.plus,
+            RollType::Advantage,
+        )
+    }
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
