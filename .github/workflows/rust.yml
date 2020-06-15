@@ -12,6 +12,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run tests
-      run: cargo test --verbose
+      run: cargo test
     - name: Run six_e tests
-      run: cd six_e && cargo test --verbose
+      run: cd six_e && cargo test
