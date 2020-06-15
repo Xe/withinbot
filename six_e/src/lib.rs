@@ -14,8 +14,9 @@ fn roll2stat(roll: i32) -> i32 {
     }
 }
 
+/// Rolls for advantage plus 1 (to keep things interesting)
 fn simple_roll(num: u32, sides: u32) -> i32 {
-    let dice = Dice::new(num, sides, None, RollType::Advantage);
+    let dice = Dice::new(num, sides, Some(2), RollType::Advantage);
     let res = dice.roll_dice();
     let res = res.final_result;
     res[0]
