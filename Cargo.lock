@@ -911,9 +911,9 @@ dependencies = [
 
 [[package]]
 name = "kankyo"
-version = "0.2.0"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "147dec7a6c66256d1ca8704e3b34365ccb8e050baeca278f16a554cced9681df"
+checksum = "325a11231fa70c1d1b562655db757cefb6022876d62f173831f35bd670ae0c40"
 
 [[package]]
 name = "kernel32-sys"

@@ -14,7 +14,7 @@ anyhow = "1"
 diesel = { version = "1.4", features = ["sqlite"] }
 dnd_dice_roller = "0.3.0"
 furbooru = "0.2"
-kankyo = "0.2"
+kankyo = "0.3"
 log = "0.4"
 pfacts = "0"
 pretty_env_logger = "0.4"
