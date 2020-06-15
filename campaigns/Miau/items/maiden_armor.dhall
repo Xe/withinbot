@@ -9,6 +9,7 @@ in  camp.Item::{
         , area = Some "town"
         , stat = Some camp.Stat.CHA
         }
+      , camp.Bonus::{ amount = Some -1, stat = Some camp.Stat.DEF }
       ]
     , weight = 1
     , kind = camp.ItemKind.Armor

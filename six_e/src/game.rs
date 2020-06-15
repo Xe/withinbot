@@ -42,8 +42,8 @@ impl Game {
         })
     }
 
-    pub fn status_message(self) -> String {
-        match self.battle {
+    pub fn status_message(&self) -> String {
+        match &self.battle {
             Some(monster) => format!(
                 "The party is in battle with a {} ({}/{})",
                 monster.source.name, monster.current_hp, monster.max_hp
@@ -52,8 +52,8 @@ impl Game {
                 let area: &Area = self.area.borrow();
 
                 format!(
-                    "The party is in the {} in the {}",
-                    area.human_name, area.kind
+                    "The party is in the {} in the {}\n{}",
+                    area.human_name, area.kind, area.description
                 )
             }
         }
@@ -68,6 +68,20 @@ impl Game {
         self.players
             .insert(id.into(), Player::new(name.into(), class.into()));
     }
+
+    pub fn won(self) -> bool {
+        let area: &Area = self.area.borrow();
+
+        for (_, player) in self.players.iter() {
+            for item in &player.inventory {
+                if item.name == self.campaign.win_condition.item.name {
+                    return true;
+                }
+            }
+        }
+
+        false
+    }
 }
 
 #[cfg(test)]
@@ -77,11 +91,12 @@ mod tests {
     #[test]
     fn new_game() {
         let mut game = Game::new("test", "../campaigns/Miau/package.dhall").unwrap();
-        game.add_player("frank", "Frank", "Fighter");
+        &game.add_player("frank", "Frank", "Fighter");
         assert_eq!(game.players.len(), 1);
         assert_eq!(
-            game.status_message(),
-            "The party is in the starting area in the wasteland"
-        )
+            &game.status_message(),
+            "The party is in the starting area in the wasteland\nA clearing in the desert, there is a path to the west that leads towards the city of Cihan."
+        );
+        assert_eq!(game.won(), false);
     }
 }

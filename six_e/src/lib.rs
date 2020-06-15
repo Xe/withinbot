@@ -22,13 +22,14 @@ fn simple_roll(num: u32, sides: u32) -> i32 {
 }
 
 /// A human player
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Player {
     pub name: String,
     pub class: String,
     pub species: types::Species,
     pub stats: Stats,
     pub exp: u32,
+    pub hp: u32,
     pub level: u32,
     pub armor: i32,
     pub inventory: Vec<types::Item>,
@@ -36,11 +37,13 @@ pub struct Player {
 
 impl Player {
     pub fn new(name: String, class: String) -> Self {
+        let stats = Stats::new();
         Player {
             name: name,
             class: class,
             species: types::Species::Human,
-            stats: Stats::new(),
+            hp: stats.hp.clone(),
+            stats: stats,
             exp: 0,
             level: 1,
             armor: 0,
@@ -59,6 +62,21 @@ impl Player {
                 RollType::Advantage,
             )
         }
+    }
+
+    /// Calculate all buffs with items on stats.
+    pub fn with_buffs(&self) -> Stats {
+        let mut stats = self.stats.clone();
+
+        for item in &self.inventory {
+            for bonus in &item.bonuses {
+                if bonus.stat.is_some() && bonus.amount.is_some() {
+                    stats.add(bonus.stat.as_ref().unwrap(), bonus.amount.unwrap());
+                }
+            }
+        }
+
+        stats
     }
 }
 
@@ -88,7 +106,7 @@ fn max_of_all_dice(data: RawResults) -> u32 {
     *dice.iter().max().unwrap()
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Stats {
     pub strength: i32,
     pub dexterity: i32,
@@ -97,6 +115,7 @@ pub struct Stats {
     pub wisdom: i32,
     pub charisma: i32,
     pub hp: u32,
+    pub risk: i32,
 }
 
 impl Stats {
@@ -123,6 +142,27 @@ impl Stats {
             wisdom: roll2stat(simple_roll(2, 6)),
             charisma: roll2stat(simple_roll(2, 6)),
             hp: hp,
+            risk: 0,
+        }
+    }
+
+    fn add(&mut self, stat: &types::Stat, amount: i32) {
+        use types::Stat::*;
+        match stat {
+            STR => self.strength += amount,
+            DEX => self.dexterity += amount,
+            CON => self.constitution += amount,
+            INT => self.intelligence += amount,
+            WIS => self.wisdom += amount,
+            CHA => self.charisma += amount,
+            RISK => self.risk += amount,
+            _ => {}
+        };
+    }
+
+    fn add_bonus(&mut self, bonus: &types::Bonus, area_kind: String) {
+        if bonus.stat.is_some() && bonus.amount.is_some() {
+            if bonus.area.is_some() {}
         }
     }
 }
