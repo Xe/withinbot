@@ -2,13 +2,30 @@ use serde::{Deserialize, Serialize};
 use std::fmt;
 
 #[derive(Debug, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 pub struct Campaign {
+    pub name: String,
+    pub description: String,
     pub areas: Vec<Area>,
     pub items: Vec<Item>,
     pub monsters: Vec<Monster>,
+    pub win_condition: WinCondition,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+impl Campaign {
+    pub(crate) fn find_area<T: Into<String>>(&self, name: T) -> Option<Area> {
+        let name = name.into();
+        for area in &self.areas {
+            if area.name == name {
+                return Some(area.clone());
+            }
+        }
+
+        None
+    }
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Area {
     pub name: String,
@@ -21,7 +38,7 @@ pub struct Area {
     pub kind: String,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Bonus {
     pub stat: Option<Stat>,
     pub amount: Option<i32>,
@@ -40,7 +57,7 @@ pub enum ItemKind {
     Consumable,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Item {
     pub name: String,
@@ -53,7 +70,7 @@ pub struct Item {
     pub legendary: bool,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Monster {
     pub name: String,
     pub damage: Roll,
@@ -64,13 +81,13 @@ pub struct Monster {
     pub drops: Vec<Item>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct MonsterItem {
     pub dice: Option<Roll>,
     pub item: Item,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct NPC {
     pub name: String,
@@ -80,13 +97,13 @@ pub struct NPC {
     pub dialogue: Vec<String>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct Range<T> {
     low: T,
     high: T,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum Species {
     Human,
     Feline,
@@ -109,7 +126,7 @@ impl fmt::Display for Species {
     }
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum Stat {
     STR,
     DEX,
@@ -123,7 +140,7 @@ pub enum Stat {
     HP,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 #[serde(rename_all = "camelCase")]
 pub struct Roll {
     pub dice_count: Option<u32>,
@@ -133,8 +150,7 @@ pub struct Roll {
     pub plus: Option<i32>,
 }
 
-
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct WinCondition {
     pub item: Item,
     pub area: Area,

@@ -1,6 +1,7 @@
 use dnd_dice_roller::dice::{Dice, RawResults, RollType};
 use std::fmt;
 
+pub mod game;
 pub mod types;
 
 fn roll2stat(roll: i32) -> i32 {
@@ -14,7 +15,7 @@ fn roll2stat(roll: i32) -> i32 {
 }
 
 fn simple_roll(num: u32, sides: u32) -> i32 {
-    let dice = Dice::new(num, sides, None, RollType::Regular);
+    let dice = Dice::new(num, sides, None, RollType::Advantage);
     let res = dice.roll_dice();
     let res = res.final_result;
     res[0]
@@ -30,6 +31,7 @@ pub struct Player {
     pub exp: u32,
     pub level: u32,
     pub armor: i32,
+    pub inventory: Vec<types::Item>,
 }
 
 impl Player {
@@ -42,6 +44,20 @@ impl Player {
             exp: 0,
             level: 1,
             armor: 0,
+            inventory: Vec::<types::Item>::new(),
+        }
+    }
+
+    pub fn roll_to_dice(&self, roll: types::Roll) -> Dice {
+        if roll.level {
+            Dice::new(self.level, roll.dice_sides, roll.plus, RollType::Advantage)
+        } else {
+            Dice::new(
+                roll.dice_count.unwrap(),
+                roll.dice_sides,
+                roll.plus,
+                RollType::Advantage,
+            )
         }
     }
 }
@@ -132,7 +148,10 @@ mod tests {
     #[test]
     fn load_campaign() {
         println!("loading...");
-        let camp: super::types::Campaign = serde_dhall::from_file("../campaigns/Miau/package.dhall").parse().unwrap();
+        let camp: super::types::Campaign =
+            serde_dhall::from_file("../campaigns/Miau/package.dhall")
+                .parse()
+                .unwrap();
         println!("loaded");
     }
 }
