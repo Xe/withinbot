@@ -6,6 +6,6 @@ in  camp.Area::{
     , description =
         "The town square of Cihan. There is a lot of hustle and bustle with activity as people go about their lives."
     , links =
-      [ "start", "palace", "inn", "armor_shop", "weapon_shop", "market" ]
+      [ "start", "palace", "tavern", "armor_shop", "weapon_shop", "market" ]
     , kind = "town"
     }
