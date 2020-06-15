@@ -69,8 +69,11 @@ impl Game {
             .insert(id.into(), Player::new(name.into(), class.into()));
     }
 
-    pub fn won(self) -> bool {
+    pub fn won(&self) -> bool {
         let area: &Area = self.area.borrow();
+        if area.name != self.campaign.win_condition.area.name {
+            return false;
+        }
 
         for (_, player) in self.players.iter() {
             for item in &player.inventory {
@@ -98,5 +101,9 @@ mod tests {
             "The party is in the starting area in the wasteland\nA clearing in the desert, there is a path to the west that leads towards the city of Cihan."
         );
         assert_eq!(game.won(), false);
+        let win_item = (&game).campaign.win_condition.item.clone();
+        let frank = game.players.get_mut("frank").unwrap();
+        frank.inventory.push(win_item);
+        assert_eq!(game.won(), true);
     }
 }
