@@ -15,7 +15,7 @@ use serenity::{
 };
 use std::{collections::HashSet, env, sync::Arc};
 
-use commands::{math::*, meta::*, owner::*, printerfacts::*, six_e::*};
+use commands::{meta::*, owner::*, printerfacts::*, six_e::*};
 
 struct ShardManagerContainer;
 
@@ -37,8 +37,14 @@ impl EventHandler for Handler {
 }
 
 #[group]
-#[commands(multiply, ping, quit, printerfact, roll, roll_stats)]
+#[commands(ping, quit, printerfact)]
+#[description = "General bot commands"]
 struct General;
+
+#[group]
+#[commands(roll, roll_stats)]
+#[description = "Commands for [6E](https://s-jared.itch.io/6e) games. These may be useful for other DnD-like games too"]
+struct SixE;
 
 #[help]
 #[individual_command_tip = "Hello! Saluton! coi!\n\
@@ -86,7 +92,8 @@ async fn main() -> anyhow::Result<()> {
                 .on_mention(Some(bot_id))
         })
         .help(&MY_HELP)
-        .group(&GENERAL_GROUP);
+        .group(&GENERAL_GROUP)
+        .group(&SIXE_GROUP);
     let mut client = Client::new(&token)
         .framework(framework)
         .event_handler(Handler)

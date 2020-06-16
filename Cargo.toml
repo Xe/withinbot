@@ -32,3 +32,7 @@ features = ["cache", "framework", "standard_framework", "gateway"]
 members = [
   "./six_e"
 ]
+
+[profile.release]
+lto = true
+opt-level = 3
