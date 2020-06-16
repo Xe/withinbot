@@ -5,6 +5,7 @@ use serenity::prelude::*;
 use std::str::FromStr;
 
 #[command]
+#[aliases(r, dice, d)]
 pub async fn roll(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     args.trimmed();
     let roll = args.message();

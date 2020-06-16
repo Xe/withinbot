@@ -28,6 +28,9 @@ let weapons =
 
 let trinkets =
       [ ./amulet_of_bandacy.dhall
+      , ./amulet_of_focus.dhall
+      , ./amulet_of_the_old_ones.dhall
+      , ./gold_amulet.dhall
       , ./mihari_amulet.dhall
       , ./sandstorm_amulet.dhall
       ]

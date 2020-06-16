@@ -3,7 +3,7 @@ let camp = ../../package.dhall
 in  camp.Item::{
     , name = "Mihari's Armor"
     , description =
-        "Armor fit for a goddess. Gives massive bonuses for defense and charisma to cat-people."
+        "Armor fit for a goddess. Gives massive bonuses for defense and charisma to felines."
     , bonuses =
       [ camp.Bonus::{
         , amount = Some +2
