@@ -15,7 +15,7 @@ use serenity::{
 };
 use std::{collections::HashSet, env, sync::Arc};
 
-use commands::{meta::*, owner::*, printerfacts::*, six_e::*};
+use commands::{furbooru::*, meta::*, owner::*, printerfacts::*, six_e::*};
 
 struct ShardManagerContainer;
 
@@ -45,6 +45,11 @@ struct General;
 #[commands(roll, roll_stats)]
 #[description = "Commands for [6E](https://s-jared.itch.io/6e) games. These may be useful for other DnD-like games too"]
 struct SixE;
+
+#[group]
+#[commands(furbooru)]
+#[description = "image searching for boorus"]
+struct Booru;
 
 #[help]
 #[individual_command_tip = "Hello! Saluton! coi!\n\
@@ -93,7 +98,8 @@ async fn main() -> anyhow::Result<()> {
         })
         .help(&MY_HELP)
         .group(&GENERAL_GROUP)
-        .group(&SIXE_GROUP);
+        .group(&SIXE_GROUP)
+        .group(&BOORU_GROUP);
     let mut client = Client::new(&token)
         .framework(framework)
         .event_handler(Handler)
@@ -103,6 +109,10 @@ async fn main() -> anyhow::Result<()> {
         let mut data = client.data.write().await;
         data.insert::<ShardManagerContainer>(Arc::clone(&client.shard_manager));
         data.insert::<FactsContainer>(commands::printerfacts::make());
+        data.insert::<FurbooruClientContainer>(commands::furbooru::make(
+            std::env::var("FURBOORU_BOT_OWNER")?,
+            std::env::var("FURBOORU_TOKEN")?,
+        ));
     }
 
     let _owners = match client

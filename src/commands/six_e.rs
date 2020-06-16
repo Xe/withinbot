@@ -14,6 +14,7 @@ use std::str::FromStr;
 pub async fn roll(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     args.trimmed();
     let roll = args.message();
+    log::info!("{} asked to roll {}", msg.author.name, roll);
 
     match dice_roll(roll) {
         Ok(reply) => {
