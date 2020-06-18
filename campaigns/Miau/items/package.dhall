@@ -1,3 +1,5 @@
+let shared = ../../shared/package.dhall
+
 let armor =
       [ ./face_mask.dhall
       , ./maiden_armor.dhall
@@ -35,12 +37,7 @@ let trinkets =
       , ./sandstorm_amulet.dhall
       ]
 
-let consumables =
-      [ ./cactus_fruit.dhall
-      , ./flask.dhall
-      , ./hydroflask.dhall
-      , ./ration.dhall
-      ]
+let consumables = [ ./cactus_fruit.dhall ] # shared.consumables
 
 let gear = [ ./torch.dhall ]
 

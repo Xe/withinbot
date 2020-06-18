@@ -1,0 +1,1 @@
+{ consumables = ./consumables/package.dhall }
