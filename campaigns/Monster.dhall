@@ -9,18 +9,18 @@ let Roll = ./Roll.dhall
 in  { Type =
         { name : Text
         , damage : Roll.Type
-        , hp : Range.Type
+        , hp : Natural
         , armor : Natural
-        , exp : Roll.Type
+        , exp : Natural
         , items : List MonsterItem.Type
         , drops : List Item.Type
         }
     , default =
       { name = "unnamed"
       , damage = Roll::{=}
-      , hp = Range::{=}
+      , hp = 1
       , armor = 0
-      , exp = Roll::{=}
+      , exp = 25
       , items = [] : List MonsterItem.Type
       , drops = [] : List Item.Type
       }

@@ -49,7 +49,7 @@ pub struct Bonus {
     pub polymorph: Option<Species>,
 }
 
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum ItemKind {
     Weapon,
     Armor,
@@ -75,9 +75,9 @@ pub struct Item {
 pub struct Monster {
     pub name: String,
     pub damage: Roll,
-    pub hp: Range<u32>,
+    pub hp: u32,
     pub armor: u32,
-    pub exp: Roll,
+    pub exp: u32,
     pub items: Vec<MonsterItem>,
     pub drops: Vec<Item>,
 }
