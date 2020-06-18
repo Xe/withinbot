@@ -5,7 +5,7 @@ use crate::{
 use anyhow::{anyhow, Result};
 use serde::{Deserialize, Serialize};
 use std::borrow::Borrow;
-use std::collections::BTreeMap;
+use std::collections::HashMap;
 use std::rc::Rc;
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
@@ -17,13 +17,19 @@ pub struct Monster {
     exp: u32,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub enum GameState {
+    Adventure,
+    Monster(Monster),
+}
+
+#[derive(Debug, Clone)]
 pub struct Game {
     pub dm: String,
-    pub players: BTreeMap<String, Player>,
+    pub players: HashMap<String, Player>,
     pub campaign: Campaign,
     pub area: Rc<Area>,
-    pub battle: Option<Monster>,
+    pub state: GameState,
 }
 
 impl Game {
@@ -35,20 +41,20 @@ impl Game {
 
         Ok(Game {
             dm: dm_id.into(),
-            players: BTreeMap::new(),
+            players: HashMap::new(),
             campaign: campaign,
             area: Rc::new(area),
-            battle: None,
+            state: GameState::Adventure,
         })
     }
 
     pub fn status_message(&self) -> String {
-        match &self.battle {
-            Some(monster) => format!(
+        match &self.state {
+            GameState::Monster(monster) => format!(
                 "The party is in battle with a {} ({}/{})",
                 monster.source.name, monster.current_hp, monster.max_hp
             ),
-            None => {
+            GameState::Adventure => {
                 let area: &Area = self.area.borrow();
 
                 format!(
