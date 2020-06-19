@@ -23,6 +23,7 @@ pkgs.mkShell {
     # dhall
     dhall.dhall-simple
     dhall.dhall-json-simple
+    dhall.dhall-lsp-simple
 
     # tooling
     niv
