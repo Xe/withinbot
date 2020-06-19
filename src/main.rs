@@ -73,7 +73,7 @@ async fn my_help(
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    kankyo::load()?;
+    kankyo::init()?;
     pretty_env_logger::init();
 
     let token = env::var("DISCORD_TOKEN").expect("Expected a token in the environment");
