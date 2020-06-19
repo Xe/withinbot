@@ -17,8 +17,8 @@ in pkgs.stdenv.mkDerivation {
   phases = "installPhase";
 
   installPhase = ''
-    mkdir -p $out
-    ln -s ${withinbot}/bin $out/bin
+    mkdir -p $out/bin
+    ln -s ${withinbot}/bin/withinbot $out/bin/withinbot
     ln -s ${campaigns} $out/campaigns
   '';
 }
