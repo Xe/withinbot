@@ -1,5 +1,5 @@
 use anyhow::Result;
-use dnd_dice_roller::dice::{Dice, RollType};
+use dnd_dice_roller::dice::{Dice, DiceResult, RollType};
 use serenity::framework::standard::{macros::command, Args, CommandResult};
 use serenity::model::prelude::*;
 use serenity::prelude::*;
@@ -14,15 +14,19 @@ use std::str::FromStr;
 pub async fn roll(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult {
     args.trimmed();
     let roll = args.message();
-    log::info!("{} asked to roll {}", msg.author.name, roll);
 
     match dice_roll(roll) {
         Ok(reply) => {
+            log::info!("{} asked to roll {}: {}", msg.author.name, roll, reply);
             msg.channel_id.say(&ctx.http, reply).await?;
         }
         Err(why) => {
+            log::error!("error parsing dice roll: {:?}", why);
             msg.channel_id
-                .say(&ctx.http, format!("error parsing dice roll:\n```{:?}```", why))
+                .say(
+                    &ctx.http,
+                    format!("error parsing dice roll:\n```{:?}```", why),
+                )
                 .await?;
         }
     };
@@ -31,11 +35,17 @@ pub async fn roll(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
 }
 
 fn dice_roll(roll: &str) -> Result<String> {
-    let mut dice = Dice::from_str(roll)?;
-    dice.roll_type = RollType::Advantage;
+    let dice = Dice::from_str(roll)?;
     let res = dice.roll_dice();
-    let res = res.final_result;
-    let reply = format!("{}", res[0]);
+    let reply = format!(
+        "{}{} = {}",
+        res.dice_results,
+        match dice.modifier {
+            Some(amt) => format!(" + {}", amt),
+            None => "".into(),
+        },
+        res.final_result[0]
+    );
     Ok(reply)
 }
 
