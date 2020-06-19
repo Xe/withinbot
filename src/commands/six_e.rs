@@ -34,8 +34,8 @@ pub async fn roll(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
     Ok(())
 }
 
-fn dice_roll(roll: &str) -> Result<String> {
-    let dice = Dice::from_str(roll)?;
+fn dice_roll<T: Into<String>>(roll: T) -> Result<String> {
+    let dice = Dice::from_str(&roll.into())?;
     let res = dice.roll_dice();
     let reply = format!(
         "{}{} = {}",
@@ -58,4 +58,15 @@ pub async fn roll_stats(ctx: &Context, msg: &Message) -> CommandResult {
         .await?;
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn dice() {
+        dice_roll("3d6").unwrap();
+        assert!(dice_roll("butts").is_err());
+    }
 }

@@ -1,6 +1,6 @@
 use crate::{
-    types::{Area, Campaign, Item, Roll, Species, WinCondition, NPC},
-    Player, Stats,
+    types::{Area, Campaign, Item},
+    Player,
 };
 use anyhow::{anyhow, Result};
 use serde::{Deserialize, Serialize};

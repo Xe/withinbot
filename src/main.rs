@@ -16,6 +16,7 @@ use serenity::{
 };
 use std::{collections::HashSet, sync::Arc};
 
+use config::*;
 use commands::{furbooru::*, meta::*, owner::*, printerfacts::*, six_e::*};
 
 struct ShardManagerContainer;
@@ -59,8 +60,8 @@ If you want more information about a specific command, just pass the command as 
 #[max_levenshtein_distance(3)]
 #[indention_prefix = "+"]
 #[lacking_permissions = "Hide"]
-#[lacking_role = "Nothing"]
-#[wrong_channel = "Nothing"]
+#[lacking_role = "Hide"]
+#[wrong_channel = "Hide"]
 async fn my_help(
     context: &Context,
     msg: &Message,
@@ -76,7 +77,7 @@ async fn my_help(
 async fn main() -> anyhow::Result<()> {
     kankyo::init()?;
     pretty_env_logger::init();
-    let config: config::Config = envy::from_env()?;
+    let config: Config = envy::from_env()?;
 
     let http = Http::new_with_token(&config.discord_token);
     let (owners, bot_id) = match http.get_current_application_info().await {
@@ -114,7 +115,7 @@ async fn main() -> anyhow::Result<()> {
             let config = config.clone();
             commands::furbooru::make(config.furbooru_bot_owner, config.furbooru_token)
         });
-        data.insert::<config::ConfigContainer>(config.make());
+        data.insert::<ConfigContainer>(config.make());
     }
 
     let _owners = match client
