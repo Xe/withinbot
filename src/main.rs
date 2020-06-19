@@ -1,4 +1,5 @@
 mod commands;
+mod config;
 
 use log::info;
 use serenity::{
@@ -13,7 +14,7 @@ use serenity::{
     model::{event::ResumedEvent, gateway::Ready, prelude::*},
     prelude::*,
 };
-use std::{collections::HashSet, env, sync::Arc};
+use std::{collections::HashSet, sync::Arc};
 
 use commands::{furbooru::*, meta::*, owner::*, printerfacts::*, six_e::*};
 
@@ -59,7 +60,7 @@ If you want more information about a specific command, just pass the command as 
 #[indention_prefix = "+"]
 #[lacking_permissions = "Hide"]
 #[lacking_role = "Nothing"]
-#[wrong_channel = "Strike"]
+#[wrong_channel = "Nothing"]
 async fn my_help(
     context: &Context,
     msg: &Message,
@@ -75,9 +76,9 @@ async fn my_help(
 async fn main() -> anyhow::Result<()> {
     kankyo::init()?;
     pretty_env_logger::init();
+    let config: config::Config = envy::from_env()?;
 
-    let token = env::var("DISCORD_TOKEN").expect("Expected a token in the environment");
-    let http = Http::new_with_token(&token);
+    let http = Http::new_with_token(&config.discord_token);
     let (owners, bot_id) = match http.get_current_application_info().await {
         Ok(info) => {
             let mut owners = HashSet::new();
@@ -100,7 +101,7 @@ async fn main() -> anyhow::Result<()> {
         .group(&GENERAL_GROUP)
         .group(&SIXE_GROUP)
         .group(&BOORU_GROUP);
-    let mut client = Client::new(&token)
+    let mut client = Client::new(&config.discord_token)
         .framework(framework)
         .event_handler(Handler)
         .await?;
@@ -109,10 +110,11 @@ async fn main() -> anyhow::Result<()> {
         let mut data = client.data.write().await;
         data.insert::<ShardManagerContainer>(Arc::clone(&client.shard_manager));
         data.insert::<FactsContainer>(commands::printerfacts::make());
-        data.insert::<FurbooruClientContainer>(commands::furbooru::make(
-            std::env::var("FURBOORU_BOT_OWNER")?,
-            std::env::var("FURBOORU_TOKEN")?,
-        ));
+        data.insert::<FurbooruClientContainer>({
+            let config = config.clone();
+            commands::furbooru::make(config.furbooru_bot_owner, config.furbooru_token)
+        });
+        data.insert::<config::ConfigContainer>(config.make());
     }
 
     let _owners = match client

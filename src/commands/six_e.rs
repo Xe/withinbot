@@ -1,5 +1,5 @@
 use anyhow::Result;
-use dnd_dice_roller::dice::{Dice, DiceResult, RollType};
+use dnd_dice_roller::dice::Dice;
 use serenity::framework::standard::{macros::command, Args, CommandResult};
 use serenity::model::prelude::*;
 use serenity::prelude::*;
