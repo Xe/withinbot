@@ -22,14 +22,14 @@ is that thing. Don't be afraid to bend the rules or go off the beaten path. The
 real fun happens there. You may have to make the Dungeon Master improvise a
 situation, this is never a bad thing.
 
-### Make sure everyone is involved
+### Make Sure Everyone is Involved
 
 Resist the temptation to railroad the adventure in a non-inclusive way for too
 long. It can feel like fun to do it, but your party-mates are your friends and
 should be involved as much as possible. That's how the stories of heroes become
 legends of groups.
 
-### Make sure everyone is comfortable
+### Make Sure Everyone is Comfortable
 
 Don't be afraid to let the Dungeon Master know if something is overwhelming or
 the like. They will be happy to help refocus people away from uncomfortable
@@ -138,8 +138,12 @@ shows. The more gold something costs, the more materials it will require (the
 Dungeon Master can help decide if there are enough materials to craft
 something).
 
-The Artificier can also pre-create up to two genius creations in a tavern or
-other safe space and store them in their inventory.
+The Artificier can also pre-create genius creations in a tavern or other safe
+space and store them in their inventory, provided they have room and materials
+for them.
+
+The Creations bubbles on the Artificer's character sheets limit how many genius
+creations can be active at once, not including the enhancements.
 
 ## Genius Creations
 
@@ -153,18 +157,20 @@ ___
    - Resilient. Gain +1 Armor 
    - Brave. +1d4 to attack rolls for a short time 
    - Flight. Drinker gains flight for a short time 
-2. **Arcane Ballista Cannon**, 25 gp. You create a small magical bipedal cannon.
+1. **Arcane Ballista Cannon**, 25 gp. You create a small magical bipedal cannon.
    It shares your initiative count, but acts after you do. It has +2 Armor and
-   HP equal to four times your level. It attacks for 1d6 damage.
-3. **Enhance Weapon**, 15 gp. Imbue a weapon of your choice with magical energy,
-   providing +1 to attack and damage rolls. 
-4. **Enhance Defense**, 15 gp. Imbue a shield or armor of your choice with
-   magical energy, providing a +1 armor bonus. 
-5. **Enhance Focus**, 20 gp. Boost an ally’s aura granting +1 to spells. 
-6. **Arcane Protector Cannon**, 30 gp. You create a small magical bipedal cannon
+   HP equal to four times your level. It attacks for 1d6 damage. This uses a
+   creation bubble when deployed.
+1. **Arcane Protector Cannon**, 30 gp. You create a small magical bipedal cannon
    that emits a burst of positive energy which heals 1d6 nearby allies for
    1d6+INT. It shares your initiative count, but acts after you do. It has +1
-   Armor and HP equal to four times your level.
+   Armor and HP equal to four times your level. This uses a creation bubble when
+   deployed.
+1. **Enhance Weapon**, 15 gp. Imbue a weapon of your choice with magical energy,
+   providing +1 to attack and damage rolls. 
+1. **Enhance Defense**, 15 gp. Imbue a shield or armor of your choice with
+   magical energy, providing a +1 armor bonus. 
+1. **Enhance Focus**, 20 gp. Boost an ally’s aura granting +1 to spells. 
 
 ---
 
