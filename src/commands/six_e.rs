@@ -38,7 +38,7 @@ fn dice_roll<T: Into<String>>(roll: T) -> Result<String> {
     let dice = Dice::from_str(&roll.into())?;
     let res = dice.roll_dice();
     let reply = format!(
-        "{}{} = {}",
+        "```\n{}{} = {}\n```",
         res.dice_results,
         match dice.modifier {
             Some(amt) => format!(" + {}", amt),
