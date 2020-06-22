@@ -153,10 +153,9 @@ ___
    - Resilient. Gain +1 Armor 
    - Brave. +1d4 to attack rolls for a short time 
    - Flight. Drinker gains flight for a short time 
-2. **Arcane Ballista Cannon**, 25 gp. You create a small magical bipedal cannon
-   with flint-lock pistols. It shares your initiative count, but acts after you
-   do. It has +2 Armor and HP equal to four times your level. It attacks for 1d6
-   damage.
+2. **Arcane Ballista Cannon**, 25 gp. You create a small magical bipedal cannon.
+   It shares your initiative count, but acts after you do. It has +2 Armor and
+   HP equal to four times your level. It attacks for 1d6 damage.
 3. **Enhance Weapon**, 15 gp. Imbue a weapon of your choice with magical energy,
    providing +1 to attack and damage rolls. 
 4. **Enhance Defense**, 15 gp. Imbue a shield or armor of your choice with
