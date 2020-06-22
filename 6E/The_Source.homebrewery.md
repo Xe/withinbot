@@ -98,7 +98,78 @@ found [here](https://xena.greedo.xeserv.us/6E/Blank.pdf).
 
 ---
 
-
 <img 
   src='https://xena.greedo.xeserv.us/6E/Advanced_6E_Logo_for_Jared.png' 
   style='position:absolute;bottom:50px;width:310px' />
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+# The Artificier
+
+The Artificier is a class defined by their ability to fashion usable things out
+of other things. These things are highly breakable (depending on the materials)
+and there is a limit to how many times the forge engine can be used in a limited
+amount of time. These extra caveats were made in order to make the Artificier
+more balanced.
+
+## Forge Engine
+
+The Artificier carries a handheld forge engine with them (it does not take up an
+inventory slot) that can be used to make various Genius Creations. This forge
+engine takes gold + materials and creates something using it. The materials fed
+into the forge engine influence the effect of the creations. The following table
+will help the Dungeon Master balance the creations:
+
+| Material      | Strength |
+|:--------------|:---------|
+| Foraged Wood  | 2        |
+| Wood          | 3        |
+| Foraged Metal | 4        |
+| Metal         | 5        |
+
+The Strength of a given material influences how many failed (or partially
+failed) rolls the creation can survive before it will break (this should be
+taken as a soft guideline for the Dungeon Master, not a hard one). Genius
+creations will also only be active for twice as many turns as the strength
+shows. The more gold something costs, the more materials it will require (the
+Dungeon Master can help decide if there are enough materials to craft
+something).
+
+The Artificier can also pre-create up to two genius creations in a tavern or
+other safe space and store them in their inventory.
+
+## Genius Creations
+
+This list is not complete and will be added to as facts and circumstances
+emerge.
+
+___
+1. **Alchemical Elixir**, 10 gp. With an empty flask in your possession, you
+   create one of the following elixirs:
+   - Healing. Heal 2d4+INT HP 
+   - Resilient. Gain +1 Armor 
+   - Brave. +1d4 to attack rolls for a short time 
+   - Flight. Drinker gains flight for a short time 
+2. **Arcane Ballista Cannon**, 25 gp. You create a small magical bipedal cannon
+   with flint-lock pistols. It shares your initiative count, but acts after you
+   do. It has +2 Armor and HP equal to four times your level. It attacks for 1d6
+   damage.
+3. **Enhance Weapon**, 15 gp. Imbue a weapon of your choice with magical energy,
+   providing +1 to attack and damage rolls. 
+4. **Enhance Defense**, 15 gp. Imbue a shield or armor of your choice with
+   magical energy, providing a +1 armor bonus. 
+5. **Enhance Focus**, 20 gp. Boost an ally’s aura granting +1 to spells. 
+6. **Arcane Protector Cannon**, 30 gp. You create a small magical bipedal cannon
+   that emits a burst of positive energy which heals 1d6 nearby allies for
+   1d6+INT. It shares your initiative count, but acts after you do. It has +1
+   Armor and HP equal to four times your level.
+
+---
+
+<img 
+  src='https://xena.greedo.xeserv.us/6E/img/artificer.jpg' 
+  style='width:325px' />
+Credit: JPGenn
