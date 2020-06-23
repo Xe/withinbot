@@ -25,13 +25,19 @@ Compatible with [6E][6e]
 \page
 
 <div class='pageNumber auto'></div>
+
+TODO(Xe): Table of Contents
+
+\page
+
+<div class='pageNumber auto'></div>
 <div class='footnote'>BASICS</div>
 
-# The Source
+# Basics
 
 Welcome, traveler, to The Source. The worlds here are perilous and full of danger, but also full of promise and adventure! In The Source, we prioritize a few ground rules in order to ensure that everyone has as much fun as possible as well as the best adventure they can.
 
-This document will also contain erratta that have come up during 6E games so things can be somewhat consistent in the future.
+This document will also contain erratta that have come up during games so things can be somewhat consistent in the future.
 
 ## Ground Rules
 
@@ -57,41 +63,37 @@ Everyone comes from a different background and has had different life experience
 
 We're ultimately here to play a game together. Take advantage of this and help to maximize the amount of fun everyone has. This will help games to be more memorable and lead to a stronger friendship.
 
+___
 The rules are very light on purpose, but even then they are paper thin when it comes to maximizing enjoyment. The Dungeon Master will usually be the judge of when to break the rules unless you can convince them otherwise.
 
 ### Don't Be An Asshole
 
 Nobody likes it when someone is an asshole.
 
-## Known Classes
+## Dice Notation
 
-- [Artificier](https://xena.greedo.xeserv.us/6E/Artificier.pdf) - The solver of practical problems.
-- [Cleric](https://xena.greedo.xeserv.us/6E/Cleric.pdf) - The magic warrior powered by religious spite.
-- [Dungeon Master](https://xena.greedo.xeserv.us/6E/Dungeon%20Master.pdf) - The person in charge of the game.
-- [Falconer](https://xena.greedo.xeserv.us/6E/Falconer.pdf) - The owner of a pet bird, or the pet owner of the bird?
-- [Fighter](https://xena.greedo.xeserv.us/6E/Fighter.pdf) - The 1v1 irl fighter of justice.
-- [Grafter](https://xena.greedo.xeserv.us/6E/Grafter.pdf) - The harvester/recycler of monster parts.
-- [Hivemaster](https://xena.greedo.xeserv.us/6E/Hivemaster.pdf) - The friend and keeper of bees. Not the bees!
-- [Infinite Maw](https://xena.greedo.xeserv.us/6E/Infinite%20Maw.pdf) - The maw that hungers for adventure and glory.
-- [Jongleur](https://xena.greedo.xeserv.us/6E/Jongleur.pdf) - The one who juggles so well enemies aren't a threat.
-- [Knight of the Sword](https://xena.greedo.xeserv.us/6E/Knight%20of%20the%20Sword.pdf) - The owner of a magic sword who hits people with it.
-- [Knight of the Temple](https://xena.greedo.xeserv.us/6E/Knight%20of%20the%20Temple.pdf) - The creator and keeper of holy promises.
-- [Maenad](https://xena.greedo.xeserv.us/6E/Maenad.pdf) - The hybrid of a cleric and warlock.
-- [Monk](https://xena.greedo.xeserv.us/6E/Monk.pdf) - The blindingly fast staff-wielding spiritual warrior.
-- [Peddler](https://xena.greedo.xeserv.us/6E/Peddler.pdf) - The person who sells shiny things to monsters instead of fighting them.
-- [Psychic](https://xena.greedo.xeserv.us/6E/Psychic.pdf) - The one who sees into the future where enemies have already lost and pulls it towards the present.
-- [Ravager](https://xena.greedo.xeserv.us/6E/Ravager.pdf) - The angry one who channels that anger into victory.
-- [Rebel](https://xena.greedo.xeserv.us/6E/Rebel.pdf) - The revolutionary bringing the change they want to see in the world.
-- [Shapeshifter](https://xena.greedo.xeserv.us/6E/Shapeshifter.pdf) - The fun parts of a druid all at once.
-- [Summoner](https://xena.greedo.xeserv.us/6E/Summoner.pdf) - The pact-binder with creatures to later call upon their aid.
-- [Thief](https://xena.greedo.xeserv.us/6E/Thief.pdf) - The lovable pick-pocket turned dungeon crawler.
-- [Tinker](https://xena.greedo.xeserv.us/6E/Tinker.pdf) - The creator of a lovable robot friend.
-- [Warrior-Monk](https://xena.greedo.xeserv.us/6E/Warrior-Monk.pdf) - The monk that punches. A lot.
-- [Wizard](https://xena.greedo.xeserv.us/6E/Wizard.pdf) - The owner of a pointy hat and many magic spells.
+The Source is a dice-heavy game. As such this rulebook will use notation to represent dice rolls. At a high level, it looks like this:
 
-These aren't the limits to what classes can exist in gameplay (in fact they were really just what I could find easily on itch.io and split into separate PDFs with imagemagick). If you are in doubt as to what can fly, ask the Dungeon Master and they'll work something out with you. A blank character sheet can be found [here](https://xena.greedo.xeserv.us/6E/Blank.pdf).
+___
+[number of dice]d[number of dice sides][+/-modifier]
 
-These character sheets will be attached to the end of this PDF so it can function as a completely standalone game supplement.
+___
+This notation is used to help make descriptions of dice actions a lot more compact. For example, instead of saying something like:
+
+> As the Artificier, roll a standard six-sided dice for your basic attack damage.
+
+Instead this notation lets that information be encoded as:
+
+> As the artificier, your basic attack does d6 damage.
+
+This notation is also understood by the Discord bot associated with The Source, Within. This bot will be explained in more detail below.
+
+___
+Sometimes descriptions of things will include the dice notation spelled out longhand with the dice notation in parentheses. This will be used to help the document flow and read more casually.
+
+## Guide to Reading
+
+This document is full of ideas. These ideas should be used to help guide your explorations and aventures. If ideas in here don't sound like they would work for you, scrape them out and discard them.
 
 \page
 
@@ -130,7 +132,7 @@ Moves only make sense when there is a sense of _risk_ involved to things. Breaki
 
 This is a fantasy roleplaying game. Your job is to help the players explore the world, have adventures and craft legends as a group. Read through this supplement and maybe a Dungeons and Dragons starter guide or two. Take things as they happen and don't be afraid to ask your players for ideas. Improvisation only can go so far.
 
-Also, failure doesn't have to be a complete failure. If you fail a hit on a monster, you could just transfer that damage to another nearby monster instead of nullifying it out. Doing this helps keep the players in the flow of the game and make everything fun for everyone.
+Also, failure doesn't have to be a *complete failure*. If you fail a hit on a monster, you could just transfer that damage to another nearby monster instead of nullifying it out. Doing this helps keep the players in the flow of the game and make everything fun for everyone.
 
 Remember the rules (even though there are only a few of them) are NOT written in stone; and if something comes up that you feel is "wrong", make up something else! Don't be afraid to ask your players for amusing ideas. They are a very valuable resource for this!
 
@@ -166,11 +168,12 @@ ___
 ~roll_stats  
 Your stats are: STR: 1, DEX: -2, CON: -1, INT: 0, WIS: 1, CHA: 2: HP: 5
 
----
-Rolling for stats will be explained in detail below.
+##### Bug Reports
+
+Report any bugs or issues with Withinbot [here](https://github.com/Xe/withinbot/new).
 
 ---
-TODO(Xe): Add a Discord invite link here
+<!-- TODO(Xe): Add a Discord invite link here -->
 
 [withinbotinvite]: https://withinbot.within.website
 
@@ -197,10 +200,10 @@ Have them fill out their name and pick an advancement on the second page of thei
 
 ### Rolling for Attributes
 
-Attributes in 6E are a bit different than they are in other tabletop games. For each attribute roll two six-sided dice. Then use the following table to determine your attribute:
+Attributes in 6E are a bit different than they are in other tabletop games. For each attribute roll two six-sided dice (2d6). Then use the following table to determine your attribute:
 
 | Roll | Attribute |
-|:-----|:----------|
+|------|-----------|
 | 11+ | 2 |
 | 9-10 | 1 |
 | 6-8 | 0 |
@@ -256,27 +259,81 @@ Don't be afraid to make things up though, that's how things become fun!
 
 # Races
 
-The world of The Source is home to an unimaginable number of races. Each of these can have members be good, evil or somewhere inbetween. Each race has their own set of bonuses that may or may not be useful. They each all may have their own ancestral languages, but every player character race can at least speak one language in common with all of the others.
+The world of The Source is home to a wide array of races. Each of these can have members be good, evil or somewhere inbetween. Each race has their own set of bonuses that may or may not be useful. They each have their own ancestral languages, but every player character race can at least speak one language in common with all of the others called Common. The details of how Common works are not explained here; but just trust me, it works. Unless specified otherwise, all races have no particular advantage or disadvantage in anything. Each race will have a +1 bonus to charisma when in a town assocaited with their species. 
+
+<!-- TODO(Xe): Add art examples here -->
+<!-- TODO(Xe): Finish like everything here, turn these notes into detailed explanations -->
+<!-- TODO(Xe): Split these into separate pages -->
+
+## Cetaceans
+
+The Cetaceans are the alpha predators of the sea, their hegemony controls most of the ocean Tel. The denizens of the waters know of and fear the Cetaceans. The Cetaceans are a powerful species. They usually have a fantastic knowledge of Common as well as their native language L'ewa. They will also have a -1 charisma vice while in towns associated with Sharks.
+
+### Racial Bonuses
+
+Cetaceans can use their tails as weapons for basic attacks. Cetaceans can also stay underwater for up to two hours at a time without having to come back up to breathe. Cetaceans also have a +1 charisma bonus when dealing with aquatic creatures. Cetaceans suffer in deserts, requiring a lot of drinking water. 
+
+### Character Profile: Divae
+
+Divae is a Wizard Cetacean that broke free of the Royal Academy of Magic after a disagreement on how to handle side contracts with bounty hunters. She wears a witchy outfit and holds a wand made out of the bones of the first beast she slew as a child with a bead of glass on the top.
+
+Divae comes from the middle class of Cetacean society. She had an advantage out of the gate, but her family was devastated by the sudden loss of her father duing the Shark Rebellion. Her magical aura is a bright purple-pink.
+
 ___
-TODO(Xe): Add art examples here
-___
-TODO(Xe): Finish like everything here
-___
-TODO(Xe): Split these into separate pages
+TODO(Xe): Art of Divae
 
 ## Dragons
 
-- Claws/tail/teeth for basic attacks
+Dragons are fire-breathing, magic-wielding tanks. They hail from the mountains of The Source. They are respected by many but can be feared by Humans. Their native language is a dragon language derived from Dohvazul, but they are fluent in Common for trade.
 
-## Dwarves
+### Racial Bonuses
+
+Dragons do not need a weapon to do basic attacks. Their claws, tail and teeth function as usable weapons.
+
+Dragons can also learn a Breathe Fire ability for one of their advancements. This will always work outside of battle for little things, but can deal d4 damage with a 25% chance of burning inside battle. Rolls for fire breathing are rolls for constitution, as it takes endurance to maintain fire breath for a long amount of time.
+
+### Character Profile: Gassas
+
+Gassas is a Monk Dragon from the peaks of Sewlet in the northeast of The Source. They trained for years to learn the basics behind Ki arts. They have written the book on how to successfully weaponize the Ki arts as well as using their peaceful properties for other advantages.
+
+Gassas comes from a low-class family of Dragons. They are not the richest Dragon around, but they are also not the poorest Dragon around. They are also nonbinary, and this has caused some tension with their family. Joining the monks has helped to separate them from their family, which has helped their relationship to heal.
+
+___
+TODO(Xe): Art of Gassas
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>RACES</div>
 
 ## Elves
 
-## Halflings
+- Pointy eared
+- Quenya/Sindarin as their main language
+- Good at harvesting material, will get non-foraged material when foraging
+
+Everyone's favorite pointy-eared magic users are back. Elves hail from the forests of The Source. Some of the most powerful druids and shapeshifters of the land are Elves. Their native language is derived from Sindarin, but they are also taught Common as part of their education.
+
+Elves are excellent allies, foragers and friends. Having an elf in your party can help make adventuring a lot safer.
+
+### Racial Bonuses
+
+Elves require a weapon to do basic attacks, but gain +1 dexterity in forests or green areas. Elves can also harvest non-foraged materials when harvesting materials. Elves that know spells can also perform very weak variants of them without needing a roll, this could be useful for starting campfires or similar small feats.
+
+### Character Profile: Vesryn
+
+Vesryn is an Elf Cleric that hails from the forests of Kahsis in The Source. She has been learning the ins and outs of her peaceful kind of existence for years, and one day decided she wanted to seek out adventure. She is fluent in Common, but not enough that she feels confident trading alone.
+
+Vesryn comes from the middle class of Elf society. She became disillusioned with the other elves after a lot of the information she thought she knew about the other races turned out to be false. She now works to help unlearn her past and relearn what others are actually like.
+
+___
+TODO(Xe): Art of Vesryn
 
 ## Humans
 
 - Fists/teeth for basic attacks
+- Common is their language
+- No distinct bonuses, no distinct vices
 
 ## Kobolds
 
@@ -287,23 +344,112 @@ TODO(Xe): Split these into separate pages
 
 - Holds items in their ears
 - Very short
+- +1 CHA bonus when haggling
+- Speaks Common in an understandable but weird way
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>RACES</div>
 
 ## Sharks
 
-- Can bite or whack with tail for basic attacks
+After decades of oppression by the Cetacean hegemony, the Sharks have finally set up their own kingdom with their own laws and relations with the other kingdoms in the land of The Source. Sharks speak Common and have an understanding of the Cetacean language L'ewa.
+
+### Racial Bonuses
+
+Sharks do not require any weapons for basic attacks, They can either savagely bite their opponents or clobber them with their tail. Sharks also can stay underwater indefinitely as long as they keep moving. Sharks also suffer in deserts, requiring a lot of drinking water.
+
+Sharks can learn a Tail Stun advancement that allows them to stun enemies for 1d4 turns if they win a dexterity roll.
+
+### Character Profile: Leana
+
+Leana is an Artificier Thresher Shark that used to work for the Royal Society of Engineering for the Cetacean Hegemony. She had become used to wearing the uniform of the society she spent 15 years in service to, but her pants are the pants of the people.
+
+Leana comes from commoners. She worked up to being a respected engineer from nothing, even though she was oppressed in the Cetacean society due to her race. Despite everything, she keeps an upbeat and positive attitude. She wears custom-made magical gauntlets that function as her forge engine, allowing her to engineer things together into genius creations.
+
+<img 
+  src='https://xena.greedo.xeserv.us/6E/img/leana_shark.png' 
+  style='width:325px' />
 
 \page
 
 <div class='pageNumber auto'></div>
 <div class='footnote'>CLASS NOTES</div>
 
-# The Artificier
+# Classes
 
-The Artificier is a class defined by their ability to fashion usable things out of other things. These things are highly breakable (depending on the materials) and there is a limit to how many times the forge engine can be used in a limited amount of time. These extra caveats were made in order to make the Artificier more balanced.
+These are all of the character classes described in the rulebook for The Source. Each class has its own advantages and disadvantages, and is balanced enough to make things somewhat fair, but not enough that the player is drowned by rules. Each of the classes described in this book will have their own page or two in this document. They will describe the advantages and disadvantages of the class.
 
-## Forge Engine
+## Known Classes
 
-The Artificier carries a handheld forge engine with them (it does not take up an inventory slot) that can be used to make various Genius Creations. This forge engine takes gold + materials and creates something using it. The materials fed into the forge engine influence the effect of the creations. The following table will help the Dungeon Master balance the creations:
+- [Artificier](https://xena.greedo.xeserv.us/6E/Artificier.pdf) - The solver of practical problems.
+- [Cleric](https://xena.greedo.xeserv.us/6E/Cleric.pdf) - The magic warrior powered by religious spite.
+- [Dungeon Master](https://xena.greedo.xeserv.us/6E/Dungeon%20Master.pdf) - The person in charge of the game.
+- [Fighter](https://xena.greedo.xeserv.us/6E/Fighter.pdf) - The 1v1 irl fighter of justice.
+- [Grafter](https://xena.greedo.xeserv.us/6E/Grafter.pdf) - The harvester/recycler of monster parts.
+- [Maenad](https://xena.greedo.xeserv.us/6E/Maenad.pdf) - The hybrid of a cleric and warlock.
+- [Monk](https://xena.greedo.xeserv.us/6E/Monk.pdf) - The blindingly fast staff-wielding spiritual warrior.
+- [Peddler](https://xena.greedo.xeserv.us/6E/Peddler.pdf) - The person who sells shiny things to monsters instead of fighting them.
+- [Rebel](https://xena.greedo.xeserv.us/6E/Rebel.pdf) - The revolutionary bringing the change they want to see in the world.
+- [Shapeshifter](https://xena.greedo.xeserv.us/6E/Shapeshifter.pdf) - The fun parts of a druid all at once.
+- [Summoner](https://xena.greedo.xeserv.us/6E/Summoner.pdf) - The pact-binder with creatures to later call upon their aid.
+- [Thief](https://xena.greedo.xeserv.us/6E/Thief.pdf) - The lovable pick-pocket turned dungeon crawler.
+- [Wizard](https://xena.greedo.xeserv.us/6E/Wizard.pdf) - The owner of a pointy hat and many magic spells.
+
+These aren't the limits to what classes can exist in gameplay (in fact they were really just what I could find easily on itch.io and split into separate PDFs with imagemagick). If you are in doubt as to what can fly, ask the Dungeon Master and they'll work something out with you. A blank character sheet can be found attached to the end of this document. 
+
+## Extra Classes
+
+There are also a few extra classes that aren't described here (for space reasons), but can easily be used in The Source.
+
+- [Falconer](https://xena.greedo.xeserv.us/6E/Falconer.pdf) - The owner of a pet bird, or the pet owner of the bird?
+- [Infinite Maw](https://xena.greedo.xeserv.us/6E/Infinite%20Maw.pdf) - The maw that hungers for adventure and glory.
+- [Jongleur](https://xena.greedo.xeserv.us/6E/Jongleur.pdf) - The one who juggles so well enemies aren't a threat.
+- [Knight of the Sword](https://xena.greedo.xeserv.us/6E/Knight%20of%20the%20Sword.pdf) - The owner of a magic sword who hits people with it.
+- [Knight of the Temple](https://xena.greedo.xeserv.us/6E/Knight%20of%20the%20Temple.pdf) - The creator and keeper of holy promises.
+- [Hivemaster](https://xena.greedo.xeserv.us/6E/Hivemaster.pdf) - The friend and keeper of bees. Not the bees!
+- [Psychic](https://xena.greedo.xeserv.us/6E/Psychic.pdf) - The one who sees into the future where enemies have already lost and pulls it towards the present.
+- [Ravager](https://xena.greedo.xeserv.us/6E/Ravager.pdf) - The angry one who channels that anger into victory.
+- [Tinker](https://xena.greedo.xeserv.us/6E/Tinker.pdf) - The creator of a lovable robot friend.
+- [Warrior-Monk](https://xena.greedo.xeserv.us/6E/Warrior-Monk.pdf) - The monk that punches. A lot.
+
+More can surely be found on [itch.io](https://itch.io) with the 6E tag.
+
+## Creating Your Own Class
+
+Don't like any of these classes? You can work with your Dungeon Master to create your own class. For inspiration on this you can use any set of details as a base to work off of. The zine [Advanced Jared Sinclair's 6th Edition—Player's Option: Skills & Powers](https://erinking.itch.io/advanced-jared-sinclairs-6th-edition-players-option-skills-powers) can help with this. Alternatively, crack open a Dungeons and Dragons or Dungeon World manual and look through the list of classes that have been created. You could be anything from a Druid to [a butter-passing robot](https://codyfaulk.itch.io/butter-passing-robot). The sky's the limit!
+
+## Come Up with a Backstory
+
+If it helps you get into character, come up with a few sentences that describe your character's background, their life story, how they came to join this adventuring party. Who did they know beforehand? What was that relationship like? How did that relationship influence others in the party?
+
+If this sounds like too much effort, feel free to cut this part out and cast it aside.
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## The Artificier
+
+The Artificier is a class defined by their ability to fashion genius creations out of other things. These genius creations are highly breakable (depending on the materials) and there is a limit to how many times the forge engine can be used in a limited amount of time. 
+
+### Basic Rules
+
+At character creation, count the number of empty inventory slots you have and roll that many four-sided dice. Multiply the result by five. This gets you your starting gold.
+
+As an Artificier, you can spend an hour to create a mundane non-consumable object.
+
+After your fourth and eighth advancements, gold to create genius creations increases by 10.
+
+When you're in town, you can spend 25gp to auction off your active genius creations, clearing out your creation bubbles.
+
+Your basic attacks do d6 damage.
+
+### Forge Engine
+
+The Artificier carries a handheld forge engine with them (it does not take up an inventory slot) that can be used to make various genius creations. This forge engine takes gold and materials, then creates something using it. The materials fed into the forge engine influence the effect of the creations. The following table will help the Dungeon Master balance the creations:
 
 | Material      | Strength |
 |:--------------|:---------|
@@ -314,10 +460,14 @@ The Artificier carries a handheld forge engine with them (it does not take up an
 
 The Strength of a given material influences how many failed (or partially failed) rolls the creation can survive before it will break (this should be taken as a soft guideline for the Dungeon Master, not a hard one). Genius creations will also only be active for twice as many turns as the strength shows. The more gold something costs, the more materials it will require (the Dungeon Master can help decide if there are enough materials to craft something).
 
+Crafting with the forge engine requires intelligence, so rolls for crafting things are rolls for intelligence. When you attempt to create a genius creation, spend the stated gold and roll for intelligence. On a 7-9, choose one of the following effects. On a 6-, choose neither:
+
+- Your creation is successful
+- There isn't an energy discharge that stalls the device for one turn
+
 The Artificier can also pre-create genius creations in a tavern or other safe space and store them in their inventory, provided they have room and materials for them.
 
-
-## Genius Creations
+### Genius Creations
 
 This list is not complete and will be added to as facts and circumstances emerge.
 
@@ -333,13 +483,20 @@ ___
 1. **Enhance Defense**, 15 gp. Imbue a shield or armor of your choice with magical energy, providing a +1 armor bonus. 
 1. **Enhance Focus**, 20 gp. Boost an ally’s aura granting +1 to spells. 
 
----
+### Advancements
 
-PLACEHOLDER ART
-<img 
-  src='https://xena.greedo.xeserv.us/6E/img/artificer.jpg' 
-  style='width:325px' />
-Credit: JPGenn
+This is just a list of suggestions, make your own if you feel these aren't good enough.
+
+- **Genius** Gain +1 Intelligence
+- **Robust** Gain +1 Constitution
+- **Shifty** Gain +1 Dexterity
+- **Worldly** Take an advancement from another class (pick a cool one, not an attribute bonus)
+- **Artillery** Increase the damage die for your Arcane Ballista Cannon
+- **Improved Affect** +1 to max Genius Creations
+- **Inspired** You can attack twice per turn, rather than once
+- **Arcane Inspiration** Your Arcane Ballista Cannon can attack twice per turn
+- **Arcane Efficency** Contribute double the GP cost towards a Creation to add +1 to all its effects (available after 5 advances)
+- **Flash of Genius** Attach the forge engine to your armor or weapon for a permanent +1 buff and damage die increase (available after 5 advances)
 
 \page
 
@@ -373,7 +530,10 @@ The text of the Open Gaming License itself is not Open Game Content. Instruction
 
 All of the rest of the SRD5 is Open Game Content as described in Section 1(d) of the License. The terms of the Open Gaming License Version 1.0a are as follows:
 
-OPEN GAME License Version 1.0a The following text is the property of Wizards of the Coast, LLC. and is Copyright 2000 Wizards of the Coast, Inc ("Wizards"). All Rights Reserved.
+---
+OPEN GAME License Version 1.0a 
+
+The following text is the property of Wizards of the Coast, LLC. and is Copyright 2000 Wizards of the Coast, Inc ("Wizards"). All Rights Reserved.
 
 1. Definitions: (a)"Contributors" means the copyright and/or trademark owners who have contributed Open Game Content; (b)"Derivative Material" means copyrighted material including derivative works and translations (including into other computer languages), potation, modification, correction, addition, extension, upgrade, improvement, compilation, abridgment or other form in which an existing work may be recast, transformed or adapted; (c) "Distribute" means to reproduce, License, rent, lease, sell, broadcast, publicly display, transmit or otherwise distribute; (d)"Open Game Content" means the game mechanic and includes the methods, procedures, processes and routines to the extent such content does not embody the Product Identity and is an enhancement over the prior art and any additional content clearly identified as Open Game Content by the Contributor, and means any work covered by this License, including translations and derivative works under copyright law, but specifically excludes Product Identity. (e) "Product Identity" means product and product line names, logos and identifying marks including trade dress; artifacts; creatures characters; stories, storylines, plots, thematic elements, dialogue, incidents, language, artwork, symbols, designs, depictions, likenesses, formats, poses, concepts, themes and graphic, photographic and other visual or audio representations; names and descriptions of characters, Spells, enchantments, personalities, teams, personas, likenesses and Special abilities; places, locations, environments, creatures, Equipment, magical or supernatural Abilities or Effects, logos, symbols, or graphic designs; and any other trademark or registered trademark clearly identified as Product identity by the owner of the Product Identity, and which specifically excludes the OPEN Game Content; (f) "Trademark" means the logos, names, mark, sign, motto, designs that are used by a Contributor to Identify itself or its products or the associated products contributed to the Open Game License by the Contributor (g) "Use", "Used" or "Using" means to use, Distribute, copy, edit, format, modify, translate and otherwise create Derivative Material of Open Game Content. (h) "You" or "Your" means the licensee in terms of this agreement.
 
