@@ -24,9 +24,26 @@ Compatible with [6E][6e]
 
 \page
 
-<div class='pageNumber auto'></div>
+## TODO
+- Writeups on classes:
+  - Fighter
+  - Grafter
+  - Monk
+  - Rebel
+  - Shapeshifter
+  - Summoner
+  - Thief
+  - Wizard
+- Art:
+  - Divae (Cetacean)
+  - Gassas (Dragon)
+  - Vesryn (Elf)
+  - Dukbe (Kobold)
+  - Aruna (Nopon)
+- Add some Basic Move ideas in a section
+- Monsters
 
-TODO(Xe): Table of Contents
+<div class='pageNumber auto'></div>
 
 \page
 
@@ -261,10 +278,6 @@ Don't be afraid to make things up though, that's how things become fun!
 
 The world of The Source is home to a wide array of races. Each of these can have members be good, evil or somewhere inbetween. Each race has their own set of bonuses that may or may not be useful. They each have their own ancestral languages, but every player character race can at least speak one language in common with all of the others called Common. The details of how Common works are not explained here; but just trust me, it works. Unless specified otherwise, all races have no particular advantage or disadvantage in anything. Each race will have a +1 bonus to charisma when in a town assocaited with their species. 
 
-<!-- TODO(Xe): Add art examples here -->
-<!-- TODO(Xe): Finish like everything here, turn these notes into detailed explanations -->
-<!-- TODO(Xe): Split these into separate pages -->
-
 ## Cetaceans
 
 The Cetaceans are the alpha predators of the sea, their hegemony controls most of the ocean Tel. The denizens of the waters know of and fear the Cetaceans. The Cetaceans are a powerful species. They usually have a fantastic knowledge of Common as well as their native language L'ewa. They will also have a -1 charisma vice while in towns associated with Sharks.
@@ -308,17 +321,13 @@ TODO(Xe): Art of Gassas
 
 ## Elves
 
-- Pointy eared
-- Quenya/Sindarin as their main language
-- Good at harvesting material, will get non-foraged material when foraging
-
 Everyone's favorite pointy-eared magic users are back. Elves hail from the forests of The Source. Some of the most powerful druids and shapeshifters of the land are Elves. Their native language is derived from Sindarin, but they are also taught Common as part of their education.
 
 Elves are excellent allies, foragers and friends. Having an elf in your party can help make adventuring a lot safer.
 
 ### Racial Bonuses
 
-Elves require a weapon to do basic attacks, but gain +1 dexterity in forests or green areas. Elves can also harvest non-foraged materials when harvesting materials. Elves that know spells can also perform very weak variants of them without needing a roll, this could be useful for starting campfires or similar small feats.
+Elves require a weapon to do basic attacks, but gain +1 dexterity in forests or green areas. Elves can also harvest non-foraged materials when harvesting materials when they learn the Pure Foraging advancement. Elves that know spells can also perform very weak variants of them without needing a roll, this could be useful for starting campfires or similar small feats.
 
 ### Character Profile: Vesryn
 
@@ -329,28 +338,48 @@ Vesryn comes from the middle class of Elf society. She became disillusioned with
 ___
 TODO(Xe): Art of Vesryn
 
-## Humans
-
-- Fists/teeth for basic attacks
-- Common is their language
-- No distinct bonuses, no distinct vices
-
 ## Kobolds
 
-- Short
-- Kinda dragon-looking
+Kobolds are a vaguely humanoid species that look somewhat like short dragons. They are masters of building traps and preparing ambushes. Their native language is unpronouncable in human tongues, but they are able to speak Common. Kobolds have experience living in dark underground areas, giving them a natural aptitude for them.
 
-## Nopons
+### Racial Bonuses
 
-- Holds items in their ears
-- Very short
-- +1 CHA bonus when haggling
-- Speaks Common in an understandable but weird way
+Kobolds that take the Night Vision advancement do not need a torch or lantern to see in the dark. This effect cannot normally be transferred to other units (unless the Dungeon Master would find the result of doing so amusing).
+
+They also may have some difficulty with merchants due to fairytales about Kobolds stealing their items and gold.
+
+Kobolds can perform basic attacks with their claws or teeth.
+
+### Character Profile: Dukbe
+
+Dukbe is a Shapeshifter Kobold that grew up in the mines of Anpar, south of the Sewlet mountain in The Source. They have been studying their craft for years, becoming an expert in impersonating others and learning their languages. Dukbe is fluent in most of the languages in The Source, their shapeshifting ability let them take classes without fear of discrimination.
+
+Dukbe is genderfluid, which gives them a natural charisma bonus because they are able to blend in so well. Dukbe doesn't come from any particular class of Kobold society. They joined the party in Usill while Vesryn and Divae were looking for a way to explore the Cave of Souls.
+
+TODO(Xe): Art of Dukbe
 
 \page
 
 <div class='pageNumber auto'></div>
 <div class='footnote'>RACES</div>
+
+## Nopons
+
+Nopons are a relatively new addition to The Source. They initially arrived in a colony airship after the devastation of their previous home. They are a short yet surprisingly industrious people. Some of the best Artificiers and Tinkers in the land are or studied under the elder Nopon masters. Nopons have learned to speak Common, but have a notable accent that other races find cute.
+
+### Racial Bonuses
+
+Nopons seem completely nonthreatening to traders. They get a +1 charisma bonus when haggling for prices because their accent seems disarming and cute.
+
+Nopons are also very short, which means that attacks need to be rethought for them. Their ears can be used to hold things, which means they can carry three items at once. They do need a weapon to perform basic attacks though.
+
+### Character Profile: Aruna
+
+Aruna is a Grafter Nopon that was part of the initial colonization of The Source. He used to assist a research division of the Cetacean Hedgemony, but broke with them after seeing how Leana was mistreated. He spent 20 years with the research division, learning everything he could about how monsters work and how they could be used as a source of inspiration.
+
+Nopon society lacks the concept of social classes, but after they were absorbed into the Hedgemony, Aruna ended up in the higher tiers of it due to his innate skills with grafting monsters together like building bricks. Aruna works to right the wrongs that he has faced in life, and uses his position in the party to help make life better for all involved.
+
+TODO(Xe): Art of Aruna
 
 ## Sharks
 
@@ -364,7 +393,7 @@ Sharks can learn a Tail Stun advancement that allows them to stun enemies for 1d
 
 ### Character Profile: Leana
 
-Leana is an Artificier Thresher Shark that used to work for the Royal Society of Engineering for the Cetacean Hegemony. She had become used to wearing the uniform of the society she spent 15 years in service to, but her pants are the pants of the people.
+Leana is an Artificier Thresher Shark that used to work for the Royal Society of Engineering for the Cetacean Hegemony. She had become used to wearing the uniform of the society she spent 15 years in service to, but her pants are the pants of the people. Leana is not afraid in battle because she can use her tail to stun opponents and flee.
 
 Leana comes from commoners. She worked up to being a respected engineer from nothing, even though she was oppressed in the Cetacean society due to her race. Despite everything, she keeps an upbeat and positive attitude. She wears custom-made magical gauntlets that function as her forge engine, allowing her to engineer things together into genius creations.
 
@@ -388,9 +417,7 @@ These are all of the character classes described in the rulebook for The Source.
 - [Dungeon Master](https://xena.greedo.xeserv.us/6E/Dungeon%20Master.pdf) - The person in charge of the game.
 - [Fighter](https://xena.greedo.xeserv.us/6E/Fighter.pdf) - The 1v1 irl fighter of justice.
 - [Grafter](https://xena.greedo.xeserv.us/6E/Grafter.pdf) - The harvester/recycler of monster parts.
-- [Maenad](https://xena.greedo.xeserv.us/6E/Maenad.pdf) - The hybrid of a cleric and warlock.
 - [Monk](https://xena.greedo.xeserv.us/6E/Monk.pdf) - The blindingly fast staff-wielding spiritual warrior.
-- [Peddler](https://xena.greedo.xeserv.us/6E/Peddler.pdf) - The person who sells shiny things to monsters instead of fighting them.
 - [Rebel](https://xena.greedo.xeserv.us/6E/Rebel.pdf) - The revolutionary bringing the change they want to see in the world.
 - [Shapeshifter](https://xena.greedo.xeserv.us/6E/Shapeshifter.pdf) - The fun parts of a druid all at once.
 - [Summoner](https://xena.greedo.xeserv.us/6E/Summoner.pdf) - The pact-binder with creatures to later call upon their aid.
@@ -401,7 +428,7 @@ These aren't the limits to what classes can exist in gameplay (in fact they were
 
 ## Extra Classes
 
-There are also a few extra classes that aren't described here (for space reasons), but can easily be used in The Source.
+There are also a few extra classes that aren't described here (for space reasons), but can easily be used in The Source. Consider these mythical classes or something.
 
 - [Falconer](https://xena.greedo.xeserv.us/6E/Falconer.pdf) - The owner of a pet bird, or the pet owner of the bird?
 - [Infinite Maw](https://xena.greedo.xeserv.us/6E/Infinite%20Maw.pdf) - The maw that hungers for adventure and glory.
@@ -409,12 +436,12 @@ There are also a few extra classes that aren't described here (for space reasons
 - [Knight of the Sword](https://xena.greedo.xeserv.us/6E/Knight%20of%20the%20Sword.pdf) - The owner of a magic sword who hits people with it.
 - [Knight of the Temple](https://xena.greedo.xeserv.us/6E/Knight%20of%20the%20Temple.pdf) - The creator and keeper of holy promises.
 - [Hivemaster](https://xena.greedo.xeserv.us/6E/Hivemaster.pdf) - The friend and keeper of bees. Not the bees!
+- [Maenad](https://xena.greedo.xeserv.us/6E/Maenad.pdf) - The hybrid of a cleric and warlock.
+- [Peddler](https://xena.greedo.xeserv.us/6E/Peddler.pdf) - The person who sells shiny things to monsters instead of fighting them.
 - [Psychic](https://xena.greedo.xeserv.us/6E/Psychic.pdf) - The one who sees into the future where enemies have already lost and pulls it towards the present.
 - [Ravager](https://xena.greedo.xeserv.us/6E/Ravager.pdf) - The angry one who channels that anger into victory.
 - [Tinker](https://xena.greedo.xeserv.us/6E/Tinker.pdf) - The creator of a lovable robot friend.
 - [Warrior-Monk](https://xena.greedo.xeserv.us/6E/Warrior-Monk.pdf) - The monk that punches. A lot.
-
-More can surely be found on [itch.io](https://itch.io) with the 6E tag.
 
 ## Creating Your Own Class
 
@@ -493,10 +520,195 @@ This is just a list of suggestions, make your own if you feel these aren't good 
 - **Worldly** Take an advancement from another class (pick a cool one, not an attribute bonus)
 - **Artillery** Increase the damage die for your Arcane Ballista Cannon
 - **Improved Affect** +1 to max Genius Creations
+- **Improved Affect** +1 to max Genius Creations
 - **Inspired** You can attack twice per turn, rather than once
 - **Arcane Inspiration** Your Arcane Ballista Cannon can attack twice per turn
 - **Arcane Efficency** Contribute double the GP cost towards a Creation to add +1 to all its effects (available after 5 advances)
 - **Flash of Genius** Attach the forge engine to your armor or weapon for a permanent +1 buff and damage die increase (available after 5 advances)
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## The Cleric
+
+The Cleric is a holy warrior bound to protect and execute justice with their religious spite as the fuel for their adventures. They can cast spells and gain new ones when they spend an hour in silent communion with their deity. Spells are gifts however, they can be forgotten as easily as they can be remembered.
+
+### Basic Rules
+
+At character creation, pick a spell alongside picking an advancement. This spell will be available both inside and outside of battle. If one of the spells on the list doesn't tickle your fancy, work with your Dungeon Master to come up with a new one.
+
+When you're in town, you may spend 25gp to empty out all of your equipment bubbles.
+
+Your basic attacks do d6 damage.
+
+When you spend an hour or so in silent communion with your deity, you forget all the spells you have memorized and may memorize your level + WIS number of spells. You may choose any spell on the Cleric list. You can do this in battle in exchange for not being able to act for 2 turns. If you get attacked during your communion, you will not be able to learn any spells.
+
+### Casting Spells
+
+To cast a spell, use your wisdom stat as the bonus for your basic move. On a 7-9 roll, choose one of the following effects. On a 6- roll, choose neither.
+
+- The spell affects its intended target
+- You don't forget the spell
+
+If you forget the spell, you should cross it off your list of available spells. You can relearn it when you are next in communion.
+
+### Spells
+
+This list will be added to as facts and circumstances emerge.
+
+- **Command** - A creature obeys a single, three-word command that does not directly harm it.
+- **Control Weather** - You may alter the type of weather at will, but you do not otherwise control it. It lasts 12 hours.
+- **Cure Disease** - Cure all status effects from someone.
+- **Hold Person** - A nearby person or humanoid creature is unable to move for d4 turns.
+- **Inspire** - In battle, nearby (within an aura of 3 map squares) allies may treat their roll as if it is one tier better.
+- **Remove Curse** - Remove all curses from something you touch.
+- **Scry** - See through the eyes of a creature you touched earlier today.
+- **Silence** - Negate all sound within 15 feet of the casting site.
+- **True Sight** - See through nearby illusions.
+- **Ward** - A silver 40 foot circle appears on the ground, centered at the caster. Choose one thing that cannot cross it: living creatures, dead creatures, projectiles or metal.
+
+### Advancements
+
+- **Resolute** - Gain +1 Wisdom.
+- **Indomitable** - Gain +1 Strength.
+- **Genial** - Gain +1 Charisma.
+- **Worldly** - Take an advancement from another class.
+- **Studious** - Add a random Wizard spell to your deity's spell list.
+- **Studious** - Add a random Wizard spell to your deity's spell list.
+- **Turn Undead** - When you renounce the unholy products of necromancy, roll for wisdom. On 10+, all mindless undead flee from your presence and all intelligent undead are momentarily stunned for d4+2 turns. On a 7-9, half of them are.
+- **Cure Light Wounds** - When you touch a wounded person, you may heal them from d6 hitpoints plus your level. You may do this as many times as you have levels.
+- **Divine Armor** - When you have no armor, you have 2 armor.
+- **Death Rites** - After a battle, when you take time to dedicate your victory to your deity of choice and deal with the dead, you and anyone who helps may add one to their next roll.
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## Fighter
+
+The Fighter is a pure warror type. The tools of their trade are their weapons, fists and other appendages. They do not have spells, magic or other kinds of feats, but they make up for that with their sheer potential for inflicting damage on anyone who threatens them or their party. They can also learn the fighting styles of worthy opponents.
+
+### Basic Rules
+
+Your basic attacks do d8 damage, and do not require a weapon (no matter what racial information says). 
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## Grafter
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## Monk
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## Rebel
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## Shapeshifter
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## Summoner
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## Thief
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>CLASS NOTES</div>
+
+## Wizard
+
+\page
+
+<div class='pageNumber auto'></div>
+<div class='footnote'>ENCOUNTERS</div>
+
+# Encounters and You
+
+Monster encounters are more about the story than the actual numbers of the fight. Keep this in mind when creating responses to moves. Here are some important guidelines to keep in mind.
+
+## Accuracy In Battle
+
+Remember the basic move from earlier:
+
+> When you do something risky or dangerous, roll 2d6 and add a relevant attribute score.
+> 
+> - On a 12+, you do it perfectly, with some additional benefit.
+> - On a 10-11, you do it perfectly.
+> - On a 7-9, you do it, but with some cost or complication.
+> - On a 6-, you fail to do it, with some additional negative consequence.
+
+In battle, a 6 or less doesn't mean that the attack has to miss completely. Is the attacker close to another enemy? Why not have the attack connect there?
+
+## Leveling Up
+
+In The Source, players level up after gaining 1000 experience points. Experience points can be gained in battle. This means that a player could concieveably level up during a fight, pick an advancement that could turn the battle around completely and then perform some glorious move to save the party.
+
+The level cap is normally 12. If players get more experience and want to level up past that, you will need to create more advancements.
+
+## Adapting Enemies From Other Games
+
+This is a bit of a tricky situation. Monsters from other games are typically balanced for that game and its battle logic. The Source (and by extension 6E) follows different rules. At a high level, monsters should follow at least the following archetype.
+
+Every enemy has a challenge statistic, which is the approximate "difficulty" of an enemy. The challenge of an enemy should help you figure out how many experience points it should award on defeat. A simple way to calculate this is to multiply the challenge level by 50.
+
+___
+> ## Sand Lizard
+> *Lizards from the sand of Miau*
+> ___
+> - **Hit Points** 12
+>___
+> - **Condition Immunities** stuns
+> - **Challenge** 2 (100 xp)
+> ___
+>
+> ***Lizard Speed*** This creature can quickly charge in for attacks. 
+>
+> ### Actions
+>
+> ***Super Spin*** *Melee Attack:* d6
+
+More monsters will be added in future supplements like Miau. Dungeon World can function as a good source of monster data.
+
+## Initiative
+
+Rolling for initiative is done by having every player roll a d10 and then ordering by the the results. If two players tie, have them roll a second d10 and that establishes their order within the tie order.
+
+For example, if Divae rolls a 10, Gassas rolls a 3, Aruna also rolls a 3 and Vesryn rolls a 1, Gassas and Aruna would then roll another d10 to figure out if Aruna or Gassas performs actions first.
+
+## Bosses
+
+Boss encounters should offer a challenge to players. Make them think out of the box. Don't have bosses just be a "whack this guy with your sword until they run out of HP" fest. Experiment. Make the boss activate traps or something. Dungeons and Dragons supplements can help you come up with ideas for this. Tales from the Yawning Portal or other beginner campaign material can also help.
+
+## You Don't Always Have To Fight
+
+Sometimes diplomacy can be used instead of straight up battle tactics. Maybe you can convince the enemies you are not a threat. High charisma rolls can function as Jedi mind tricks in a pinch. Be creative! Also, avoid torturing people if you can help it.
 
 \page
 
@@ -514,6 +726,9 @@ This is just a list of suggestions, make your own if you feel these aren't good 
 - [6E: The Maenad - georgiebats](https://georgiebats.itch.io/6e-the-maenad)
 - [Advanced Jared Sinclair's 6th Edition—Player's Option: Skills & Powers - Aaron King](https://erinking.itch.io/advanced-jared-sinclairs-6th-edition-players-option-skills-powers)
 - [The Complete Playbook's Handbook - Small Gods Press](https://smallgodspress.itch.io/the-complete-playbooks-handbook)
+
+___
+Some concepts for races and characters may be inspired by other works. Any similariries are coincidental.
 
 ## Art Credits
 
