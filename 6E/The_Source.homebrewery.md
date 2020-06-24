@@ -24,24 +24,100 @@ Compatible with [6E][6e]
 
 \page
 
-## TODO
-- Writeups on classes:
-  - Fighter
-  - Grafter
-  - Monk
-  - Rebel
-  - Shapeshifter
-  - Summoner
-  - Thief
-  - Wizard
-- Art:
-  - Divae (Cetacean)
-  - Gassas (Dragon)
-  - Vesryn (Elf)
-  - Dukbe (Kobold)
-  - Aruna (Nopon)
-- Add some Basic Move ideas in a section
-- Monsters
+<div class='toc'>
+##### Table Of Contents
+- **[1 The Source](#p1)**
+- **[2 Basics](#p3)**
+  - [2.1 Ground Rules](#p3)
+    - [2.1.1 Be Creative](#p3)
+    - [2.1.2 Make Sure Everyone is Involved](#p3)
+    - [2.1.3 Make Sure Everyone is Comfortable](#p3)
+    - [2.1.4 Be Respectful](#p3)
+    - [2.1.5 Maximize Fun](#p3)
+    - [2.1.6 Don't Be An Asshole](#p3)
+  - [2.2 Dice Notation](#p3)
+  - [2.3 Guide to Reading](#p3)
+- **[3 Basic Rules](#p4)**
+  - [3.1 The Basic Move](#p4)
+  - [3.2 Dungeon Master Advice](#p4)
+  - [3.3 Using Withinbot](#p4)
+  - [3.4 Character Creation](#p5)
+    - [3.4.1 Choosing A Class](#p5)
+    - [3.4.2 Rolling for Attributes](#p5)
+    - [3.4.3 Rolling for Hitpoints](#p5)
+    - [3.4.4 Inventory Slots](#p5)
+    - [3.4.5 Getting Equipment](#p5)
+    - [3.4.6 Gear Points](#p5)
+    - [3.4.7 Making Things Up](#p5)
+- **[4 Races](#p6)**
+  - [4.1 Cetaceans](#p6)
+    - [4.1.1 Racial Bonuses](#p6)
+    - [4.1.2 Character Profile: Divae](#p6)
+  - [4.2 Dragons](#p6)
+    - [4.2.1 Racial Bonuses](#p6)
+    - [4.2.2 Character Profile: Gassas](#p6)
+  - [4.3 Elves](#p7)
+    - [4.3.1 Racial Bonuses](#p7)
+    - [4.3.2 Character Profile: Vesryn](#p7)
+  - [4.4 Kobolds](#p7)
+    - [4.4.1 Racial Bonuses](#p7)
+    - [4.4.2 Character Profile: Dukbe](#p7)
+  - [4.5 Nopons](#p8)
+    - [4.5.1 Racial Bonuses](#p8)
+    - [4.5.2 Character Profile: Aruna](#p8)
+  - [4.6 Sharks](#p8)
+    - [4.6.1 Racial Bonuses](#p8)
+    - [4.6.2 Character Profile: Leana](#p8)
+- **[5 Classes](#p9)**
+  - [5.1 Known Classes](#p9)
+  - [5.2 Extra Classes](#p9)
+  - [5.3 Creating Your Own Class](#p9)
+  - [5.4 Come Up with a Backstory](#p9)
+  - [5.5 The Artificier](#p10)
+    - [5.5.1 Basic Rules](#p10)
+    - [5.5.2 Forge Engine](#p10)
+    - [5.5.3 Genius Creations](#p10)
+    - [5.5.4 Advancements](#p10)
+  - [5.6 The Cleric](#p11)
+    - [5.6.1 Basic Rules](#p11)
+    - [5.6.2 Casting Spells](#p11)
+    - [5.6.3 Spells](#p11)
+    - [5.6.4 Advancements](#p11)
+  - [5.7 Fighter](#p11)
+    - [5.7.1 Basic Rules](#p11)
+    - [5.7.2 Advancements](#p11)
+  - [5.8 Grafter](#p12)
+    - [5.8.1 Basic Rules](#p12)
+    - [5.8.2 Grafting](#p12)
+    - [5.8.3 Advancements](#p12)
+  - [5.9 Monk](#p12)
+    - [5.9.1 Basic Rules](#p12)
+    - [5.9.2 Ki Arts](#p12)
+    - [5.9.3 Advancements](#p12)
+  - [5.10 Shapeshifter](#p13)
+    - [5.10.1 Basic Rules](#p13)
+    - [5.10.2 Shapeshifting](#p13)
+    - [5.10.3 Advancements](#p13)
+  - [5.11 Thief](#p13)
+    - [5.11.1 Basic Rules](#p13)
+    - [5.11.2 Advancements](#p13)
+  - [5.12 Wizard](#p14)
+    - [5.12.1 Basic Rules](#p14)
+    - [5.12.2 Casting Spells](#p14)
+    - [5.12.3 Spells](#p14)
+    - [5.12.4 Advancements](#p14)
+- **[6 Encounters and You](#p15)**
+  - [6.1 Accuracy In Battle](#p15)
+  - [6.2 Leveling Up](#p15)
+  - [6.3 Adapting Enemies From Other Games](#p15)
+  - [6.4 Initiative](#p15)
+  - [6.5 Bosses](#p15)
+  - [6.6 You Don't Always Have To Fight](#p15)
+- **[7 Bibliography](#p16)**
+  - [7.1 Art Credits](#p16)
+  - [7.2 License](#p16)
+</div>
+
 
 <div class='pageNumber auto'></div>
 
@@ -293,7 +369,7 @@ Divae is a Wizard Cetacean that broke free of the Royal Academy of Magic after a
 Divae comes from the middle class of Cetacean society. She had an advantage out of the gate, but her family was devastated by the sudden loss of her father duing the Shark Rebellion. Her magical aura is a bright purple-pink.
 
 ___
-TODO(Xe): Art of Divae
+<!-- TODO(Xe): Art of Divae -->
 
 ## Dragons
 
@@ -312,7 +388,7 @@ Gassas is a Monk Dragon from the peaks of Sewlet in the northeast of The Source.
 Gassas comes from a low-class family of Dragons. They are not the richest Dragon around, but they are also not the poorest Dragon around. They are also nonbinary, and this has caused some tension with their family. Joining the monks has helped to separate them from their family, which has helped their relationship to heal.
 
 ___
-TODO(Xe): Art of Gassas
+<!-- TODO(Xe): Art of Gassas -->
 
 \page
 
@@ -336,7 +412,7 @@ Vesryn is an Elf Cleric that hails from the forests of Kahsis in The Source. She
 Vesryn comes from the middle class of Elf society. She became disillusioned with the other elves after a lot of the information she thought she knew about the other races turned out to be false. She now works to help unlearn her past and relearn what others are actually like.
 
 ___
-TODO(Xe): Art of Vesryn
+<!-- TODO(Xe): Art of Vesryn -->
 
 ## Kobolds
 
@@ -356,7 +432,7 @@ Dukbe is a Shapeshifter Kobold that grew up in the mines of Anpar, south of the 
 
 Dukbe is genderfluid, which gives them a natural charisma bonus because they are able to blend in so well. Dukbe doesn't come from any particular class of Kobold society. They joined the party in Usill while Vesryn and Divae were looking for a way to explore the Cave of Souls.
 
-TODO(Xe): Art of Dukbe
+<!-- TODO(Xe): Art of Dukbe -->
 
 \page
 
@@ -379,7 +455,7 @@ Aruna is a Grafter Nopon that was part of the initial colonization of The Source
 
 Nopon society lacks the concept of social classes, but after they were absorbed into the Hedgemony, Aruna ended up in the higher tiers of it due to his innate skills with grafting monsters together like building bricks. Aruna works to right the wrongs that he has faced in life, and uses his position in the party to help make life better for all involved.
 
-TODO(Xe): Art of Aruna
+<!-- TODO(Xe): Art of Aruna -->
 
 ## Sharks
 
@@ -418,9 +494,7 @@ These are all of the character classes described in the rulebook for The Source.
 - [Fighter](https://xena.greedo.xeserv.us/6E/Fighter.pdf) - The 1v1 irl fighter of justice.
 - [Grafter](https://xena.greedo.xeserv.us/6E/Grafter.pdf) - The harvester/recycler of monster parts.
 - [Monk](https://xena.greedo.xeserv.us/6E/Monk.pdf) - The blindingly fast staff-wielding spiritual warrior.
-- [Rebel](https://xena.greedo.xeserv.us/6E/Rebel.pdf) - The revolutionary bringing the change they want to see in the world.
 - [Shapeshifter](https://xena.greedo.xeserv.us/6E/Shapeshifter.pdf) - The fun parts of a druid all at once.
-- [Summoner](https://xena.greedo.xeserv.us/6E/Summoner.pdf) - The pact-binder with creatures to later call upon their aid.
 - [Thief](https://xena.greedo.xeserv.us/6E/Thief.pdf) - The lovable pick-pocket turned dungeon crawler.
 - [Wizard](https://xena.greedo.xeserv.us/6E/Wizard.pdf) - The owner of a pointy hat and many magic spells.
 
@@ -428,7 +502,7 @@ These aren't the limits to what classes can exist in gameplay (in fact they were
 
 ## Extra Classes
 
-There are also a few extra classes that aren't described here (for space reasons), but can easily be used in The Source. Consider these mythical classes or something.
+There are also a few extra classes that aren't described here (for space reasons), but can easily be used in The Source. Consider these mythical classes or something. They will be described in detail in future expansions
 
 - [Falconer](https://xena.greedo.xeserv.us/6E/Falconer.pdf) - The owner of a pet bird, or the pet owner of the bird?
 - [Infinite Maw](https://xena.greedo.xeserv.us/6E/Infinite%20Maw.pdf) - The maw that hungers for adventure and glory.
@@ -440,12 +514,14 @@ There are also a few extra classes that aren't described here (for space reasons
 - [Peddler](https://xena.greedo.xeserv.us/6E/Peddler.pdf) - The person who sells shiny things to monsters instead of fighting them.
 - [Psychic](https://xena.greedo.xeserv.us/6E/Psychic.pdf) - The one who sees into the future where enemies have already lost and pulls it towards the present.
 - [Ravager](https://xena.greedo.xeserv.us/6E/Ravager.pdf) - The angry one who channels that anger into victory.
+- [Rebel](https://xena.greedo.xeserv.us/6E/Rebel.pdf) - The revolutionary bringing the change they want to see in the world.
+- [Summoner](https://xena.greedo.xeserv.us/6E/Summoner.pdf) - The pact-binder with creatures to later call upon their aid.
 - [Tinker](https://xena.greedo.xeserv.us/6E/Tinker.pdf) - The creator of a lovable robot friend.
 - [Warrior-Monk](https://xena.greedo.xeserv.us/6E/Warrior-Monk.pdf) - The monk that punches. A lot.
 
 ## Creating Your Own Class
 
-Don't like any of these classes? You can work with your Dungeon Master to create your own class. For inspiration on this you can use any set of details as a base to work off of. The zine [Advanced Jared Sinclair's 6th Edition—Player's Option: Skills & Powers](https://erinking.itch.io/advanced-jared-sinclairs-6th-edition-players-option-skills-powers) can help with this. Alternatively, crack open a Dungeons and Dragons or Dungeon World manual and look through the list of classes that have been created. You could be anything from a Druid to [a butter-passing robot](https://codyfaulk.itch.io/butter-passing-robot). The sky's the limit!
+Don't like any of these classes? You can work with your Dungeon Master to create your own class. For inspiration on this you can use any set of details as a base to work off of. The zine [Advanced Jared Sinclair's 6th Edition—Player's Option: Skills & Powers](https://erinking.itch.io/advanced-jared-sinclairs-6th-edition-players-option-skills-powers) can help with this (ask your Dungeon Master for a copy if they have it). Alternatively, crack open a Dungeons and Dragons or Dungeon World manual and look through the list of classes that have been created. You could be anything from a Druid to [a butter-passing robot](https://codyfaulk.itch.io/butter-passing-robot). The sky's the limit!
 
 ## Come Up with a Backstory
 
@@ -514,17 +590,16 @@ ___
 
 This is just a list of suggestions, make your own if you feel these aren't good enough.
 
-- **Genius** Gain +1 Intelligence
-- **Robust** Gain +1 Constitution
-- **Shifty** Gain +1 Dexterity
-- **Worldly** Take an advancement from another class (pick a cool one, not an attribute bonus)
-- **Artillery** Increase the damage die for your Arcane Ballista Cannon
-- **Improved Affect** +1 to max Genius Creations
-- **Improved Affect** +1 to max Genius Creations
-- **Inspired** You can attack twice per turn, rather than once
-- **Arcane Inspiration** Your Arcane Ballista Cannon can attack twice per turn
-- **Arcane Efficency** Contribute double the GP cost towards a Creation to add +1 to all its effects (available after 5 advances)
-- **Flash of Genius** Attach the forge engine to your armor or weapon for a permanent +1 buff and damage die increase (available after 5 advances)
+- **Genius** Gain +1 Intelligence.
+- **Robust** Gain +1 Constitution.
+- **Shifty** Gain +1 Dexterity.
+- **Worldly** Take an advancement from another class (pick a cool one, not an attribute bonus).
+- **Artillery** Increase the damage die for your Arcane Ballista Cannon.
+- **Improved Affect** +1 to max Genius Creations.
+- **Inspired** You can attack twice per turn, rather than once.
+- **Arcane Inspiration** Your Arcane Ballista Cannon can attack twice per turn.
+- **Arcane Efficency** Contribute double the GP cost towards a Creation to add +1 to all its effects (available after 5 advances).
+- **Flash of Genius** Attach the forge engine to your armor or weapon for a permanent +1 buff and damage die increase (available after 5 advances).
 
 \page
 
@@ -576,16 +651,10 @@ This list will be added to as facts and circumstances emerge.
 - **Genial** - Gain +1 Charisma.
 - **Worldly** - Take an advancement from another class.
 - **Studious** - Add a random Wizard spell to your deity's spell list.
-- **Studious** - Add a random Wizard spell to your deity's spell list.
 - **Turn Undead** - When you renounce the unholy products of necromancy, roll for wisdom. On 10+, all mindless undead flee from your presence and all intelligent undead are momentarily stunned for d4+2 turns. On a 7-9, half of them are.
 - **Cure Light Wounds** - When you touch a wounded person, you may heal them from d6 hitpoints plus your level. You may do this as many times as you have levels.
 - **Divine Armor** - When you have no armor, you have 2 armor.
 - **Death Rites** - After a battle, when you take time to dedicate your victory to your deity of choice and deal with the dead, you and anyone who helps may add one to their next roll.
-
-\page
-
-<div class='pageNumber auto'></div>
-<div class='footnote'>CLASS NOTES</div>
 
 ## Fighter
 
@@ -593,7 +662,24 @@ The Fighter is a pure warror type. The tools of their trade are their weapons, f
 
 ### Basic Rules
 
-Your basic attacks do d8 damage, and do not require a weapon (no matter what racial information says). 
+Your basic attacks do d8 damage, and do not require a weapon (no matter what racial information says).
+
+When you get a 12+ roll on attack with a remarkable weapon, you might impress, dismay or frighten your enemy.
+
+When you deliver the killing blow to a worthy opponent, you learn from its fighting style. Decide which remarkable technique you want to take away and right it on your sheet. When you use that move, add 1 to your roll. You may have as many techniques memorized as you have levels.
+
+### Advancements
+
+- **Robust** Gain +1 Constitution.
+- **Indomitable** - Gain +1 Strength.
+- **Genial** - Gain +1 Charisma.
+- **Worldly** - Take an advancement from another class.
+- **Dangerous** - You deal +1 damage.
+- **Sturdy** - When you roll your HP, keep one more die than you would otherwise.
+- **Comrade** - When you roll to help someone, add one to your result.
+- **Precise** - When you roll a 12+ to fight or shoot someone, you ignore their armor.
+- **Soldier** - Armor takes up one fewer inventory slot for you.
+- **Inspiring** - At any time, you may give HP to your allies.
 
 \page
 
@@ -602,19 +688,84 @@ Your basic attacks do d8 damage, and do not require a weapon (no matter what rac
 
 ## Grafter
 
-\page
+Where the Artificer experiments with magical trinkets, the Grafter experiments on flesh and blood. They are able to harvest monsters for parts and then graft those parts onto teammates, enemies or even themselves. 
 
-<div class='pageNumber auto'></div>
-<div class='footnote'>CLASS NOTES</div>
+### Basic Rules
+
+Your basic attacks do d4 damage.
+
+### Grafting
+
+Harvesting monsters for parts can be done after battles. You can choose to study a monster and harvest it for parts by rolling for intelligence. On a 10+, learn the Graft for the monster (if you don't know it yet) and harvest d3 parts. On a 7-9, harvest one part. 
+
+You can then graft these parts onto a patient (plus one more part for each Graft the patient has already) by rolling for intelligence. For the results:
+
+- On a 12+, the Graft is permanent.
+- On a 10-11, the Graft will last a week.
+- On a 7-9, the Graft will last as many days as you spent parts (1 part = 1 day, etc).
+- On a 6 or below, the Graft fails, the patient suffers d3 damage and you lose d3 parts in the confusion.
+
+### Advancements
+
+- **Big Brain** - Gain +1 Intelligence.
+- **Steady Hand** - Gain +1 Dexterity.
+- **Strong Stomach** - Gain +1 Constitution.
+- **Study Abroad** - Take an advancement from another class.
+- **Efficient** - Base Graft cost is always 1 part, regardless of how many Grafts are already on the patient.
+- **Zoologist** - Create a new Graft based on a monster of Legend.
+- **Self-Care** - You can apply Grafts to yourself by rolling for Dexterity instead of Intelligence
+- **Dread Recognition** - When an ally fights a monster they have a graft of, they get +1 on their attacks, spells and actions against it.
+- **Alchemy** - When you boil Parts down into a tonic, spend 1 Part and roll for intelligence. On a 10 or higher create 1 Graft tonic. On a 7-9 spend another part to make the tonic. You or a party member can drink this tonic to gain the Graft's effect for a day.
+- **Second Opinion** - When you attempt to Graft, you may reroll but you must keep the second result.
+- **Stronger Stomach** - When you eat rations to recover HP, you may also eat a Part, adding one die to the roll.
 
 ## Monk
 
-\page
+Monks spend years in solemn meditation to learn the ability to harness powerful Ki arts to change the tides of adventures. Ki arts are like spells but due to the years of intense study, you cannot lose them if you fail a roll.
 
-<div class='pageNumber auto'></div>
-<div class='footnote'>CLASS NOTES</div>
+### Basic Rules
 
-## Rebel
+Your basic attacks do d6 damage. 
+
+When you drop a random aphorism in a conversation, you gain +1 charisma for the rest of the conversation.
+
+When you deliver a killing blow, you can quickly move into melee range of the next closest enemy.
+
+### Ki Arts
+
+Ki arts can be rolled for at any point in the adventure. Follow the directions the Ki art describes and then you either gain the effects or risk opening yourself for counterattack. When you attempt to channel a Ki art, roll for the statistic shown. On a 7-9, choose one of the following effects. On a roll of 6 or below, neither happen.
+
+- The move affects its intended target.
+- You don't open yourself up for a counterattack.
+
+Here are some Ki arts Monks know:
+
+- **Temple upon the Mountain** - Roll for strength, you halve all damage until the end of the next turn.
+- **Fist of Iron** - Roll for strength, add +2 to the damage roll on this attack.
+- **Ride the Lightning** - Roll for dexterity, channel electricty through your fist, doing double damage to enemies wearing metal armor.
+- **Cloak Stance** - Roll for wisdom, you're difficult to hit and impose -2 to the next attack against you.
+- **Herculean Aura** - Roll for strength or dexterity, choose which modifier to add and increase the damage die for this attack to a d8.
+- **Steel Advance** - Roll for wisdom, choose up to 2 enemies and rapidly attack each target.
+- **Wind Stands True** - Roll for dexterity, half the damage of the next attack that hits you and immediately make a counterattack.
+- **Ghostwalk Blessings** - Roll for strength, your skin hardens, allowing you to fall up to 40 feet without taking damage.
+- **Calling the Corners** - Roll for wisdom and choose one of the following effects:
+  - Instantly light or snuff out a candle or torch.
+  - Chill or warm nonliving material for a short time.
+  - Mold earth, fire, water or mist into a crude form.
+  
+### Advancements
+
+- **Graceful** - Gain +1 Dexterity.
+- **Indomitable** - Gain +1 Strength.
+- **Resolute** - Gain +1 Wisdom.
+- **Worldly** - Take an advancement from another class.
+- **Dangerous** - You deal +1 damage.
+- **Opportunist** - Whenever a creature closeby is hit by someone else, you can make a melee attack on that creature.
+- **Stunning Strike** - When you roll a +12 on an attack with a remarkable weapon, you stun your enemy.
+- **Extra Strike** - When you are first for initiative, you make two attacks.
+- **Unarmored Defense** - Light clothing counts as +1 armor
+- **Disciplined** - Work with the Dungeon Master to create a new Ki art.
+- **Toughness** - You may heal yourself for d6 plus your level, as many times per days as you have levels (available after 5 advances).
 
 \page
 
@@ -623,19 +774,73 @@ Your basic attacks do d8 damage, and do not require a weapon (no matter what rac
 
 ## Shapeshifter
 
-\page
+Shapeshifters are naturals at blending in. They can assume the forms, traits and moves of creatures they have studied. 
 
-<div class='pageNumber auto'></div>
-<div class='footnote'>CLASS NOTES</div>
+### Basic Rules
 
-## Summoner
+Your basic attacks do d6 damage.
 
-\page
+Your Bestial forms list can have as many entries as you have levels and Wisdom (minimum 1).
 
-<div class='pageNumber auto'></div>
-<div class='footnote'>CLASS NOTES</div>
+### Shapeshifting
+
+When you study an animal for an hour or so, add it to your Bestial Forms list. 
+
+When you assume a Bestial Form, roll for Constitution. On a 10+ choose three of the following effects. On a 7-9, choose two of the following effects. On a 6 or lower, choose 1 of the following effects.
+
+- Act immediately.
+- Increase damage die by one step (d6->d8->d10).
+- Reduce damage taken by one.
+- Gain +1 to the beast's strongest
+
+You gain the creature's statistics, as well as any abilities or actions they have. Characters outside the party will be unable to tell a shapeshifted Bestial Form from the real thing.
+
+### Advancements
+
+- **Eagle-eyed** - Gain +1 Wisdom.
+- **Lion-hearted** - Gain +1 Constitution.
+- **Cat's-paw** - Gain +1 Dexterity.
+- **Adaptation** - Take an advancement from another class.
+- **Ferocious** - You deal +2 damage while transformed.
+- **Bodily Mastery** - While resting you may re-roll any number of dice once.
+- **Material Transformation** - When you transform, any gear you have will shapeshift with you.
+- **Abberrant** - You may study monsters to add them to your Bestial Forms list.
+- **Doppelganger** - You may study people to add them to your Bestial Forms list.
+- **Symbiotic Transformation** - You may touch a willing participant to let them assume a Bestial Form. They must make their own roll.
+- **Dire Form** - When you roll a 12+ to assume a Bestial Form, double all chosen bonuses.
+- **Fluent** - When you transform into a person, you are fluent in any languages they are.
 
 ## Thief
+
+Thieves are part of the cunning underbelly of The Source. Thieves control a large part of the economy due to their sheer number of connections and aptitude in trade.
+
+### Basic Rules
+
+Your basic attacks do d6 damage. 
+
+When you attack an unaware opponent, treat any 6- results as 7-9 instead and add an extra d6 to your damage roll. When you try to pass unnoticed, you may treat a 6- result as a 7-9 instead.
+
+You are well-connected. When situations come up and you need to know someone, roll for Charisma:
+
+- On a 10+, that person will act like they owe you a favor
+- On a 7-9, that person will think you owe them a favor
+- On a 6-, that person will want a lot more than they would want normally
+
+Make sure to keep a list of your connections and any notes about them. They will remember.
+
+### Advancements
+
+- **Artful** - Gain +1 Dexterity.
+- **Resolute** - Gain +1 Wisdom.
+- **Popular** - Gain +1 Charisma.
+- **Worldly** - Take an advancement from another class.
+- **Light-Footed** - Light armor doesn't take up an inventory slot.
+- **Marksman** - You deal +2 damage with ranged weapons.
+- **Eagle Eye** - You're never caught by surprise. If an enemy would surprise you, you act first instead.
+- **Underdog** - When you're outnumbered, you have +1 armor.
+- **Slippery** - Light armor prevents two damage per attack instead of one.
+- **Assassin** - When you roll a 12+ to attack an unaware enemy, add another d6 to your damage.
+- **Wary** - When you attempt to avoid or disable a trap, add your Dexterity and Intelligence to your roll.
 
 \page
 
@@ -643,6 +848,53 @@ Your basic attacks do d8 damage, and do not require a weapon (no matter what rac
 <div class='footnote'>CLASS NOTES</div>
 
 ## Wizard
+
+The Source has rules. Wizards bend those rules to their will so they can become unstoppable. Choose this class if you want to wield unfathomly powerful magic to smite your enemies where they stand.
+
+### Basic Rules
+
+Your basic attacks do d4 damage.
+
+When you study your personal spellbook for an hour or so, you forget any spells you had memorized and may memorize as many spells as your level plus your Intelligence. You can choose any spell in your spellbook.
+
+### Casting Spells
+
+When you attempt to cast a spell you've memorized, roll for Intelligence. On a 7-9, choose one of the following effects. On a 6-, choose neither.
+
+- The spell affects its intended target.
+- You don't forget the spell.
+
+When you attempt to add a spell from a scroll or another Wizard's spellbook to your spellbook, roll for Intelligence. On a 10+, add the spell. On a 7-9 you may add it only if you remove another spell. On a 6-, you fail and may never memorize or cast that spell.
+
+### Spells
+
+Work with your Dungeon Master to come up with some better spells. To create new spells, look up spells from other game handbooks, but only copy the name and any side effects. The Dungeon Master will know what damage is right.
+
+- **Detect Magic** - You hear nearby magical auras singing. Volume and harmoney increase the aura's power and refinement.
+- **Floating Disc** - An invisible, frictionless object hovers two feet above the ground. It can hold up to your level number of humanoids, or about the equivalent weight.
+- **Magic Missile** - Hurls a glowing dart of magical energy at a target. Does d6 plus your level in damage.
+- **Fireball** - Hurls a ball of fire at a target. Does d6 plus your Intelligence damage and causes a burn at 12+.
+- **Comprehend** - You are fluent in all languages for the rest of the day.
+- **Pit** - A pit 10 feet wide and 30 feet deep opens in the ground.
+- **Icy Touch** - A thick ice layer spreads across a touched surface, up to a 30 foot radius.
+- **Raise Dead** - 1d6 skeletons rise from the ground to serve you. They can only obey simple orders and attack for d4 damage.
+- **Spider Climb** - You can climb surfaces like a spider.
+- **Sleep** - d6 nearby creatures fall into a light sleep.
+- **Adhere** - A nearby object becomes covered in extremely sticky slime.
+
+### Advancements
+
+- **Resolute** - Gain +1 Wisdom.
+- **Smart** - Gain +1 Intelligence.
+- **Shifty** - Gain +1 Dexterity.
+- **Worldly** - Take an advancement from another class.
+- **Adept** - You can memorize one additional spell per day from your spellbook.
+- **Studious** - Work with your Dungeon Master to add a new spell to your spellbook.
+- **Cross-Disciplinary** - Add a random Cleric spell to your spellbook.
+- **Infamous** - Your reputation precedes you. When you need to make a new connection, roll+CHA. On a 7-9, the person you find is less than ideal, or needs a favor. On a 6-, they they’ve got a job for you, and they won’t take no for an answer.
+- **Magic Detector** - You may cast Detect Magic as a cantrip. You don’t have to memorize it, and casting it doesn’t require a roll (it always counts as a 10+).
+- **Arcane Armor** - When you bear no armor or shield, you have 1 armor.
+- **Wild Magic** - When you roll a 12+ to cast a spell, double its effectiveness.
 
 \page
 
@@ -668,7 +920,7 @@ In battle, a 6 or less doesn't mean that the attack has to miss completely. Is t
 
 ## Leveling Up
 
-In The Source, players level up after gaining 1000 experience points. Experience points can be gained in battle. This means that a player could concieveably level up during a fight, pick an advancement that could turn the battle around completely and then perform some glorious move to save the party.
+In The Source, players level up after gaining 1000 times their current level experience points. Players may pick an advancement while leveling up. Experience points can be gained in battle. This means that a player could concieveably level up during a fight, pick an advancement that could turn the battle around completely and then perform some glorious move to save the party.
 
 The level cap is normally 12. If players get more experience and want to level up past that, you will need to create more advancements.
 
@@ -683,6 +935,10 @@ ___
 > *Lizards from the sand of Miau*
 > ___
 > - **Hit Points** 12
+> ___
+>|STR|DEX|CON|INT|WIS|CHA|
+>|:---:|:---:|:---:|:---:|:---:|:---:|
+>|0|+2|0|-1|-2|-2|
 >___
 > - **Condition Immunities** stuns
 > - **Challenge** 2 (100 xp)
