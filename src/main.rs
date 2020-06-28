@@ -17,7 +17,7 @@ use serenity::{
 use std::{collections::HashSet, sync::Arc};
 
 use config::*;
-use commands::{furbooru::*, meta::*, owner::*, printerfacts::*, six_e::*};
+use commands::{furbooru::*, meta::*, owner::*, printerfacts::*, six_e::*, swatch::*};
 
 struct ShardManagerContainer;
 
@@ -39,7 +39,7 @@ impl EventHandler for Handler {
 }
 
 #[group]
-#[commands(ping, quit, printerfact)]
+#[commands(ping, quit, printerfact, beats)]
 #[description = "General bot commands"]
 struct General;
 

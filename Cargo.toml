@@ -11,6 +11,7 @@ readme = "README.md"
 
 [dependencies]
 anyhow = "1"
+beats = "0.1"
 diesel = { version = "1.4", features = ["sqlite"] }
 dnd_dice_roller = "0.3.0"
 envy = "0.4"
