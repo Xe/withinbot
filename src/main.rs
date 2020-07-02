@@ -16,8 +16,8 @@ use serenity::{
 };
 use std::{collections::HashSet, sync::Arc};
 
-use config::*;
 use commands::{furbooru::*, meta::*, owner::*, printerfacts::*, six_e::*, swatch::*};
+use config::*;
 
 struct ShardManagerContainer;
 

@@ -1,6 +1,6 @@
 use serde::{Deserialize, Serialize};
 use serenity::prelude::TypeMapKey;
-use std::{path::PathBuf, sync::{Arc}};
+use std::{path::PathBuf, sync::Arc};
 use tokio::sync::Mutex;
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
