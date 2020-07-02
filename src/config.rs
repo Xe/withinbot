@@ -12,10 +12,6 @@ pub(crate) struct Config {
     #[serde(skip_serializing)]
     pub furbooru_token: String,
 
-    pub derpibooru_bot_owner: String,
-    #[serde(skip_serializing)]
-    pub derpibooru_token: String,
-
     pub campaign_folder: PathBuf,
 }
 

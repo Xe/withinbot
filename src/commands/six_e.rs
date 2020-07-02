@@ -35,7 +35,20 @@ pub async fn roll(ctx: &Context, msg: &Message, mut args: Args) -> CommandResult
 }
 
 fn dice_roll<T: Into<String>>(roll: T) -> Result<String> {
-    let dice = Dice::from_str(&roll.into())?;
+    let mut dice = Dice::from_str(&roll.into())?;
+
+    if dice.number_of_dice_to_roll > 100 {
+        dice.number_of_dice_to_roll = 100;
+    }
+
+    if dice.sides > 100 {
+        dice.sides = 100
+    }
+
+    if dice.sides == 0 {
+        dice.sides = 6;
+    }
+
     let res = dice.roll_dice();
     let reply = format!(
         "```\n{}{} = {}\n```",
