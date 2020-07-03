@@ -1,8 +1,26 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Serialize, Clone, Debug, Deserialize)]
+struct AllowedMentions {
+    parse: Vec<String>,
+}
+
+#[derive(Serialize, Clone, Debug, Deserialize)]
 pub struct Body {
-    pub content: String,
+    content: String,
+    allowed_mentions: AllowedMentions,
+}
+
+impl Body {
+    pub fn new<T>(body: T) -> Body
+    where
+        T: Into<String>,
+    {
+        Body {
+            content: body.into(),
+            allowed_mentions: AllowedMentions { parse: vec![] },
+        }
+    }
 }
 
 /// Execute a Discord webhook with the given Body.
@@ -28,9 +46,7 @@ mod tests {
 
         super::execute(
             format!("{}", server.url("/")),
-            super::Body {
-                content: "hi".to_string(),
-            },
+            super::Body::new("hi".to_string()),
         )
         .await
         .unwrap();
