@@ -80,6 +80,7 @@ mod tests {
     #[test]
     fn dice() {
         dice_roll("3d6").unwrap();
+        dice_roll("1491d124898").unwrap();
         assert!(dice_roll("butts").is_err());
     }
 }

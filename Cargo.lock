@@ -504,6 +504,7 @@ dependencies = [
 name = "discord_webhook"
 version = "0.1.0"
 dependencies = [
+ "anyhow",
  "httptest",
  "reqwest",
  "serde",
