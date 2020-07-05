@@ -15,7 +15,7 @@ beats = "0.1"
 diesel = { version = "1.4", features = ["sqlite"] }
 dnd_dice_roller = "0.3.0"
 envy = "0.4"
-furbooru = "0.2"
+furbooru = "0.3"
 kankyo = "0.3"
 log = "0.4"
 pfacts = "0"

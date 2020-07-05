@@ -630,11 +630,12 @@ checksum = "3dcaa9ae7725d12cdb85b3ad99a434db70b468c09ded17e012d86b5c1010f7a7"
 
 [[package]]
 name = "furbooru"
-version = "0.2.0"
+version = "0.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0bbdc8da384b971770ffe93103667b86d8c24b5f0e7fe7e2eefc5750a9896c33"
+checksum = "66f081d39b3ca1d24dfece0f6659f1588a417bb426560bc8198334bf035723ff"
 dependencies = [
  "anyhow",
+ "async-trait",
  "futures-util",
  "http",
  "log",
