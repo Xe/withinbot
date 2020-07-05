@@ -16,6 +16,7 @@ pkgs.mkShell {
     rustfmt
 
     # native dependencies
+    lua5_3
     openssl
     pkg-config
     sqlite

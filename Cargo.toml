@@ -37,5 +37,9 @@ features = ["cache", "framework", "standard_framework", "gateway"]
 [workspace]
 members = [
   "./discord_webhook",
+  "./contrib/lua/discord_webhook",
   "./six_e"
 ]
+
+[profile.release]
+lto = true
