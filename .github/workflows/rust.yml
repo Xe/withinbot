@@ -11,5 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - uses: leafo/gh-actions-lua@v6
+      with:
+        luaVersion: "5.3.5"
     - name: Run tests
       run: cargo test --all
