@@ -10,8 +10,12 @@ fn discord_webhook(lua: &Lua) -> LuaResult<LuaTable> {
 }
 
 async fn send(_: &Lua, (url, body): (String, String)) -> LuaResult<()> {
+    use blocking::block_on;
     use discord_webhook::*;
-    smol::run(execute(url, Body::new(body))).expect("discord webhook post to work");
+    use std::sync::Arc;
+
+    block_on(execute(url, Body::new(body)))
+        .map_err(|why| mlua::Error::ExternalError(Arc::new(why)))?;
 
     Ok(())
 }

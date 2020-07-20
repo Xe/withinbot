@@ -8,7 +8,8 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
+blocking = "0.4"
 discord_webhook = { path = "../../../discord_webhook" }
 mlua = { version = "0.4", features = ["lua53", "module", "async"] }
 mlua_derive = "0.4"
-smol = { version = "0.1", features = ["tokio02"] }
+smol = { version = "0.2", features = ["tokio02"] }
