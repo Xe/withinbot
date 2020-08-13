@@ -70,7 +70,8 @@ async fn my_help(
     groups: &[&'static CommandGroup],
     owners: HashSet<UserId>,
 ) -> CommandResult {
-    help_commands::with_embeds(context, msg, args, help_options, groups, owners).await
+    let _ = help_commands::with_embeds(context, msg, args, help_options, groups, owners).await;
+    Ok(())
 }
 
 #[tokio::main]
@@ -94,7 +95,7 @@ async fn main() -> anyhow::Result<()> {
         .configure(|c| {
             c.owners(owners)
                 .delimiters(vec![", ", ","])
-                .prefix("~")
+                .prefixes(vec!["~", "!"])
                 .with_whitespace(true)
                 .on_mention(Some(bot_id))
         })

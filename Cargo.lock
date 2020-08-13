@@ -337,10 +337,10 @@ dependencies = [
 
 [[package]]
 name = "command_attr"
-version = "0.2.0"
-source = "git+https://github.com/Lakelezz/serenity/?branch=await#a2e8cdedd0a42e31f83c668a80aa3a39ae0a37f3"
+version = "0.3.0-rc.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "093ee06b40fcba41b22ddf85de7ed33728fe2e246fcdbc1b1d3ab26f87fabf3b"
 dependencies = [
- "futures",
  "proc-macro2",
  "quote",
  "syn",
@@ -1880,6 +1880,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "rustls"
+version = "0.18.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cac94b333ee2aac3284c5b8a1b7fb4dd11cba88c244e3fe33cdbd047af0eb693"
+dependencies = [
+ "base64 0.12.3",
+ "log",
+ "ring",
+ "sct",
+ "webpki",
+]
+
+[[package]]
 name = "ryu"
 version = "1.0.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2043,13 +2056,14 @@ dependencies = [
 
 [[package]]
 name = "serenity"
-version = "0.8.6"
-source = "git+https://github.com/Lakelezz/serenity/?branch=await#a2e8cdedd0a42e31f83c668a80aa3a39ae0a37f3"
+version = "0.9.0-rc.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9f2b6557e836289a35b45ecc9da78b464de79cec3aa9b7cfd07f654cbc478c00"
 dependencies = [
  "async-tls",
  "async-trait",
  "async-tungstenite",
- "base64 0.11.0",
+ "base64 0.12.3",
  "bitflags",
  "bytes",
  "chrono",
@@ -2058,11 +2072,12 @@ dependencies = [
  "futures",
  "log",
  "reqwest",
- "rustls 0.16.0",
+ "rustls 0.18.0",
  "serde",
  "serde_json",
  "static_assertions",
  "tokio",
+ "typemap_rev",
  "url",
  "uwl",
  "webpki",
@@ -2405,6 +2420,12 @@ name = "typed-arena"
 version = "1.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a9b2228007eba4120145f785df0f6c92ea538f5a3635a612ecf4e334c8c1446d"
+
+[[package]]
+name = "typemap_rev"
+version = "0.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "078d41124321488746becfa144977b9b54667af408ff933cbbce9d83e7796ac9"
 
 [[package]]
 name = "typenum"

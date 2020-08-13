@@ -30,8 +30,7 @@ discord_webhook = { path = "./discord_webhook" }
 six_e = { path = "./six_e" }
 
 [dependencies.serenity]
-git = "https://github.com/Lakelezz/serenity/"
-branch = "await"
+version = "0.9.0-rc.0"
 features = ["cache", "framework", "standard_framework", "gateway"]
 
 [workspace]
