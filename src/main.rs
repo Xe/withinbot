@@ -77,7 +77,7 @@ async fn my_help(
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     kankyo::init()?;
-    pretty_env_logger::init();
+    env_logger::init();
     let config: Config = envy::from_env()?;
 
     let http = Http::new_with_token(&config.discord_token);
