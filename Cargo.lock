@@ -112,14 +112,14 @@ checksum = "c17772156ef2829aadc587461c7753af20b7e8db1529bc66855add962a3b35d3"
 
 [[package]]
 name = "async-tls"
-version = "0.6.0"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6ce6977f57fa68da77ffe5542950d47e9c23d65f5bc7cb0a9f8700996913eec7"
+checksum = "d7e7fbc0843fc5ad3d5ca889c5b2bea9130984d34cd0e62db57ab70c2529a8e3"
 dependencies = [
  "futures",
- "rustls 0.16.0",
+ "rustls",
  "webpki",
- "webpki-roots 0.17.0",
+ "webpki-roots 0.20.0",
 ]
 
 [[package]]
@@ -135,9 +135,9 @@ dependencies = [
 
 [[package]]
 name = "async-tungstenite"
-version = "0.4.2"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4187bb446c8ecb8849f17cef7553db8bdb09e482e806257130189958fb42dca7"
+checksum = "a5c45a0dd44b7e6533ac4e7acc38ead1a3b39885f5bbb738140d30ea528abc7c"
 dependencies = [
  "async-tls",
  "futures-io",
@@ -145,7 +145,7 @@ dependencies = [
  "log",
  "pin-project",
  "tokio",
- "tungstenite",
+ "tungstenite 0.11.1",
 ]
 
 [[package]]
@@ -170,15 +170,6 @@ name = "autocfg"
 version = "1.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f8aac770f1885fd7e387acedd76065302551364496e46b3dd00860b2f8359b9d"
-
-[[package]]
-name = "base64"
-version = "0.10.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0b25d992356d2eb0ed82172f5248873db5560c4721f564b13cb5193bda5e668e"
-dependencies = [
- "byteorder",
-]
 
 [[package]]
 name = "base64"
@@ -338,9 +329,9 @@ dependencies = [
 
 [[package]]
 name = "command_attr"
-version = "0.3.0-rc.0"
+version = "0.3.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "093ee06b40fcba41b22ddf85de7ed33728fe2e246fcdbc1b1d3ab26f87fabf3b"
+checksum = "c538daab2daaf13de61cea91648a62bb11d267ef629f707d5fe3dd080043ab4d"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -752,7 +743,7 @@ dependencies = [
  "serde_json",
  "tokio",
  "tokio-tungstenite",
- "tungstenite",
+ "tungstenite 0.10.1",
  "url",
 ]
 
@@ -1037,7 +1028,7 @@ dependencies = [
  "futures-util",
  "hyper",
  "log",
- "rustls 0.18.0",
+ "rustls",
  "tokio",
  "tokio-rustls",
  "webpki",
@@ -1563,7 +1554,7 @@ checksum = "54be6e404f5317079812fc8f9f5279de376d8856929e21c184ecf6bbd692a11d"
 dependencies = [
  "maplit",
  "pest",
- "sha-1",
+ "sha-1 0.8.2",
 ]
 
 [[package]]
@@ -1833,7 +1824,7 @@ dependencies = [
  "native-tls",
  "percent-encoding",
  "pin-project-lite",
- "rustls 0.18.0",
+ "rustls",
  "serde",
  "serde_json",
  "serde_urlencoded",
@@ -1870,19 +1861,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "138e3e0acb6c9fb258b19b67cb8abd63c00679d2851805ea151465464fe9030a"
 dependencies = [
  "semver",
-]
-
-[[package]]
-name = "rustls"
-version = "0.16.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b25a18b1bf7387f0145e7f8324e700805aade3842dd3db2e74e4cdeb4677c09e"
-dependencies = [
- "base64 0.10.1",
- "log",
- "ring",
- "sct",
- "webpki",
 ]
 
 [[package]]
@@ -2062,11 +2040,10 @@ dependencies = [
 
 [[package]]
 name = "serenity"
-version = "0.9.0-rc.0"
+version = "0.9.0-rc.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9f2b6557e836289a35b45ecc9da78b464de79cec3aa9b7cfd07f654cbc478c00"
+checksum = "21e935a7f3f4752257183ee1f3553b10ea5b514a55de0e536dca7f3742b97d18"
 dependencies = [
- "async-tls",
  "async-trait",
  "async-tungstenite",
  "base64 0.12.3",
@@ -2078,7 +2055,6 @@ dependencies = [
  "futures",
  "log",
  "reqwest",
- "rustls 0.18.0",
  "serde",
  "serde_json",
  "static_assertions",
@@ -2086,8 +2062,6 @@ dependencies = [
  "typemap_rev",
  "url",
  "uwl",
- "webpki",
- "webpki-roots 0.19.0",
 ]
 
 [[package]]
@@ -2100,6 +2074,19 @@ dependencies = [
  "digest 0.8.1",
  "fake-simd",
  "opaque-debug 0.2.3",
+]
+
+[[package]]
+name = "sha-1"
+version = "0.9.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "170a36ea86c864a3f16dd2687712dd6646f7019f301e57537c7f4dc9f5916770"
+dependencies = [
+ "block-buffer 0.9.0",
+ "cfg-if",
+ "cpuid-bool",
+ "digest 0.9.0",
+ "opaque-debug 0.3.0",
 ]
 
 [[package]]
@@ -2325,7 +2312,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "228139ddd4fea3fa345a29233009635235833e52807af7ea6448ead03890d6a9"
 dependencies = [
  "futures-core",
- "rustls 0.18.0",
+ "rustls",
  "tokio",
  "webpki",
 ]
@@ -2352,7 +2339,7 @@ dependencies = [
  "pin-project",
  "tokio",
  "tokio-tls",
- "tungstenite",
+ "tungstenite 0.10.1",
 ]
 
 [[package]]
@@ -2416,7 +2403,26 @@ dependencies = [
  "log",
  "native-tls",
  "rand",
- "sha-1",
+ "sha-1 0.8.2",
+ "url",
+ "utf-8",
+]
+
+[[package]]
+name = "tungstenite"
+version = "0.11.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f0308d80d86700c5878b9ef6321f020f29b1bb9d5ff3cab25e75e23f3a492a23"
+dependencies = [
+ "base64 0.12.3",
+ "byteorder",
+ "bytes",
+ "http",
+ "httparse",
+ "input_buffer",
+ "log",
+ "rand",
+ "sha-1 0.9.1",
  "url",
  "utf-8",
 ]
@@ -2654,18 +2660,18 @@ dependencies = [
 
 [[package]]
 name = "webpki-roots"
-version = "0.17.0"
+version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a262ae37dd9d60f60dd473d1158f9fbebf110ba7b6a5051c8160460f6043718b"
+checksum = "f8eff4b7516a57307f9349c64bf34caa34b940b66fed4b2fb3136cb7386e5739"
 dependencies = [
  "webpki",
 ]
 
 [[package]]
 name = "webpki-roots"
-version = "0.19.0"
+version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8eff4b7516a57307f9349c64bf34caa34b940b66fed4b2fb3136cb7386e5739"
+checksum = "0f20dea7535251981a9670857150d571846545088359b28e4951d350bdaf179f"
 dependencies = [
  "webpki",
 ]
