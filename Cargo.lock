@@ -712,6 +712,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b"
 
 [[package]]
+name = "form_urlencoded"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ece68d15c92e84fa4f19d3780f1294e5ca82a78a6d515f1efaabcc144688be00"
+dependencies = [
+ "matches",
+ "percent-encoding",
+]
+
+[[package]]
 name = "fuchsia-zircon"
 version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -965,13 +975,14 @@ checksum = "cd179ae861f0c2e53da70d892f5f3029f9594be0c41dc5269cd371691b1dc2f9"
 
 [[package]]
 name = "httptest"
-version = "0.13.1"
+version = "0.13.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "73a7841d52c94850769f37142e0d50f04edeac8384e98318dc8ee1532a8e9661"
+checksum = "e1bd96bf54054746b39c93f5e43822e5fa29fb081190d1f24d8f51d2fb800577"
 dependencies = [
  "bstr",
  "bytes",
  "crossbeam-channel",
+ "form_urlencoded",
  "futures",
  "http",
  "hyper",
@@ -980,9 +991,8 @@ dependencies = [
  "regex",
  "serde",
  "serde_json",
- "serde_urlencoded",
+ "serde_urlencoded 0.7.0",
  "tokio",
- "url",
 ]
 
 [[package]]
@@ -1827,7 +1837,7 @@ dependencies = [
  "rustls",
  "serde",
  "serde_json",
- "serde_urlencoded",
+ "serde_urlencoded 0.6.1",
  "tokio",
  "tokio-rustls",
  "tokio-tls",
@@ -2036,6 +2046,18 @@ dependencies = [
  "itoa",
  "serde",
  "url",
+]
+
+[[package]]
+name = "serde_urlencoded"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "edfa57a7f8d9c1d260a549e7224100f6c43d43f9103e06dd8b4095a9b2b43ce9"
+dependencies = [
+ "form_urlencoded",
+ "itoa",
+ "ryu",
+ "serde",
 ]
 
 [[package]]
