@@ -23,7 +23,7 @@ pfacts = "0"
 rand = "0"
 reqwest = { version = "0.10", features = ["json"] }
 serde = { version = "1", features = ["derive"] }
-tokio = { version = "0.2", features = ["macros"] }
+tokio = { version = "0.3", features = ["macros"] }
 
 # in-repo packages
 discord_webhook = { path = "./discord_webhook" }
