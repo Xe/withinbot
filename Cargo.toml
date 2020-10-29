@@ -13,7 +13,7 @@ readme = "README.md"
 anyhow = "1"
 beats = "0.1"
 diesel = { version = "1.4", features = ["sqlite"] }
-dnd_dice_roller = "0.3.0"
+dnd_dice_roller = "0.4.0"
 envy = "0.4"
 env_logger = "0"
 furbooru = "0.3"

@@ -522,9 +522,9 @@ dependencies = [
 
 [[package]]
 name = "dice-command-parser"
-version = "0.5.1"
+version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "de2928a825e2ec21990b34b40d74367f9d87e6207e015626649c2aa0b88ebbc9"
+checksum = "069a2afc4ed1f3ec5766b46250f31d23956d69ae859d7b491ff494f34e91fb21"
 dependencies = [
  "nom",
  "thiserror",
@@ -584,9 +584,9 @@ dependencies = [
 
 [[package]]
 name = "dnd_dice_roller"
-version = "0.3.0"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1f220ca6413047404a5aba774ead241d25cfe90ecf1170a4afeeaea23dbb227c"
+checksum = "3bef994091eeebd264763c26a434a3fd88715032b55cbfda2a17b5b146aa7bc8"
 dependencies = [
  "dice-command-parser",
  "rand",
