@@ -76,7 +76,7 @@ async fn my_help(
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    kankyo::init()?;
+    let _ = kankyo::init();
     env_logger::init();
     let config: Config = envy::from_env()?;
 
