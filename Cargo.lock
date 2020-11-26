@@ -38,9 +38,12 @@ dependencies = [
 
 [[package]]
 name = "annotate-snippets"
-version = "0.7.0"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aba2d96b8c8b5e656ad7ffb0d09f57772f10a1db74c8d23fca0ec695b38a4047"
+checksum = "5c96c3d1062ea7101741480185a6a1275eab01cbe8b20e378d1311bc056d2e08"
+dependencies = [
+ "unicode-width",
+]
 
 [[package]]
 name = "anyhow"
@@ -410,7 +413,7 @@ dependencies = [
  "rayon",
  "regex",
  "serde",
- "serde_cbor 0.11.1",
+ "serde_cbor",
  "serde_derive",
  "serde_json",
  "tinytemplate",
@@ -518,9 +521,9 @@ dependencies = [
 
 [[package]]
 name = "dhall"
-version = "0.8.0"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a8e2aa2abb16c2ef064fbc45f5163be5c5ff990e8584e54fb1c8f6e318107289"
+checksum = "a7930c7ac2b3989a07a2a3400bf9f4bc1c65074f330e3ff22b372a4d386fabd0"
 dependencies = [
  "abnf_to_pest",
  "annotate-snippets",
@@ -535,10 +538,9 @@ dependencies = [
  "quote",
  "reqwest",
  "serde",
- "serde_cbor 0.9.0",
+ "serde_cbor",
  "sha2",
  "url",
- "walkdir",
 ]
 
 [[package]]
@@ -2022,17 +2024,6 @@ dependencies = [
 
 [[package]]
 name = "serde_cbor"
-version = "0.9.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "45cd6d95391b16cd57e88b68be41d504183b7faae22030c0cc3b3f73dd57b2fd"
-dependencies = [
- "byteorder",
- "half",
- "serde",
-]
-
-[[package]]
-name = "serde_cbor"
 version = "0.11.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1e18acfa2f90e8b735b2836ab8d538de304cbb6729a7360729ea5a895d15a622"
@@ -2054,9 +2045,9 @@ dependencies = [
 
 [[package]]
 name = "serde_dhall"
-version = "0.8.0"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "313ac1225c35cd2760b4124d39fa4df19b4a5e29edd55a3eb3fc0b01940f8707"
+checksum = "f80d945a711c648e559c4d39832379f36a303d393fca4719080de51701266f38"
 dependencies = [
  "dhall",
  "dhall_proc_macros",
