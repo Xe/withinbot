@@ -2,6 +2,7 @@ mod commands;
 mod config;
 
 use log::info;
+use sdnotify::async_await::SdNotify;
 use serenity::{
     async_trait,
     client::bridge::gateway::ShardManager,
@@ -31,6 +32,17 @@ struct Handler;
 impl EventHandler for Handler {
     async fn ready(&self, _: Context, ready: Ready) {
         info!("Connected as {}", ready.user.name);
+
+        if let Ok(ref mut n) = SdNotify::from_env() {
+            let _ = n
+                .set_status(format!(
+                    "connected as {} in {} guilds",
+                    ready.user.name,
+                    ready.guilds.len()
+                ))
+                .await
+                .map_err(|why| log::error!("can't notify systemd: {}", why));
+        }
     }
 
     async fn resume(&self, _: Context, _: ResumedEvent) {
@@ -103,7 +115,7 @@ async fn main() -> anyhow::Result<()> {
         .group(&GENERAL_GROUP)
         .group(&SIXE_GROUP)
         .group(&BOORU_GROUP);
-    let mut client = Client::new(&config.discord_token)
+    let mut client = Client::builder(&config.discord_token)
         .framework(framework)
         .event_handler(Handler)
         .await?;
@@ -133,6 +145,10 @@ async fn main() -> anyhow::Result<()> {
         }
         Err(why) => panic!("Couldn't get application info: {:?}", why),
     };
+
+    if let Ok(ref mut n) = SdNotify::from_env() {
+        n.notify_ready().await?;
+    }
 
     client.start().await?;
 
