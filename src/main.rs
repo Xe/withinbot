@@ -35,6 +35,10 @@ impl EventHandler for Handler {
 
         if let Ok(ref mut n) = SdNotify::from_env() {
             let _ = n
+                .notify_ready()
+                .await
+                .map_err(|why| log::error!("can't signal readiness to systemd: {}", why));
+            let _ = n
                 .set_status(format!(
                     "connected as {} in {} guilds",
                     ready.user.name,
@@ -145,10 +149,6 @@ async fn main() -> anyhow::Result<()> {
         }
         Err(why) => panic!("Couldn't get application info: {:?}", why),
     };
-
-    if let Ok(ref mut n) = SdNotify::from_env() {
-        n.notify_ready().await?;
-    }
 
     client.start().await?;
 
