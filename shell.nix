@@ -20,6 +20,7 @@ pkgs.mkShell {
     openssl
     pkg-config
     sqlite
+    systemd
 
     # dhall
     dhall.dhall-simple

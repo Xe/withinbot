@@ -1,5 +1,6 @@
 mod commands;
 mod config;
+mod logger;
 
 use log::info;
 use sdnotify::async_await::SdNotify;
@@ -93,7 +94,13 @@ async fn my_help(
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     let _ = kankyo::init();
+
+    #[cfg(debug_assertions)]
     env_logger::init();
+
+    #[cfg(not(debug_assertions))]
+    logger::JournalLog::init()?;
+
     let config: Config = envy::from_env()?;
 
     let http = Http::new_with_token(&config.discord_token);
