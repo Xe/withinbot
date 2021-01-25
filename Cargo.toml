@@ -25,7 +25,7 @@ reqwest = { version = "0.10", features = ["json"] }
 systemd = "0.8"
 sdnotify = "0.1"
 serde = { version = "1", features = ["derive"] }
-tokio = { version = "0.2", features = ["macros"] }
+tokio = { version = "1.1", features = ["macros"] }
 
 # in-repo packages
 discord_webhook = { path = "./discord_webhook" }
