@@ -32,7 +32,7 @@ discord_webhook = { path = "./discord_webhook" }
 six_e = { path = "./six_e" }
 
 [dependencies.serenity]
-version = "0.9.1"
+version = "0.10.4"
 features = ["cache", "framework", "standard_framework", "gateway"]
 
 [workspace]
