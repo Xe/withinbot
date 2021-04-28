@@ -1,0 +1,45 @@
+version: 2
+updates:
+- package-ecosystem: cargo
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: dnd_dice_roller
+    versions:
+    - 0.4.0
+    - 0.5.0
+  - dependency-name: tokio
+    versions:
+    - 1.1.0
+    - 1.1.1
+    - 1.2.0
+    - 1.3.0
+    - 1.4.0
+  - dependency-name: anyhow
+    versions:
+    - 1.0.38
+    - 1.0.39
+  - dependency-name: serde
+    versions:
+    - 1.0.123
+    - 1.0.124
+  - dependency-name: serenity
+    versions:
+    - 0.10.2
+    - 0.10.4
+  - dependency-name: serde_json
+    versions:
+    - 1.0.61
+    - 1.0.62
+    - 1.0.63
+  - dependency-name: reqwest
+    versions:
+    - 0.11.0
+    - 0.11.1
+  - dependency-name: serde_dhall
+    versions:
+    - 0.10.0
+    - 0.9.0
