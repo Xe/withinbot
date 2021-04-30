@@ -21,7 +21,7 @@ kankyo = "0.3"
 log = "0.4"
 pfacts = "0"
 rand = "0"
-reqwest = { version = "0.10", features = ["json"] }
+reqwest = { version = "0.11", features = ["json"] }
 systemd = "0.8"
 sdnotify = "0.1"
 serde = { version = "1", features = ["derive"] }
