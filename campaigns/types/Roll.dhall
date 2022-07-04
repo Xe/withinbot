@@ -3,13 +3,13 @@
     , diceSides : Natural
     , min : Optional Natural
     , level : Bool
-    , plus : Optional Integer
+    , plus : Optional Natural
     }
 , default =
   { diceCount = Some 1
   , diceSides = 6
   , min = None Natural
   , level = False
-  , plus = None Integer
+  , plus = None Natural
   }
 }
