@@ -4,33 +4,105 @@ In the desert of Miau, the town of Cihan has been cut off from trade with other 
 
 ## Win Condition
 
-Take the Sandstorm Amulet to starting area
+Take the Sandstorm Amulet to Cihan Town Square
 
 ## Areas
 
-### starting area
+### Miau Wasteland Clearing
 
 A wasteland area.
 
 A clearing in the desert, there is a path to the west that leads towards the city of Cihan.
 
-### town square of Cihan
+
+
+
+
+
+
+### Cihan Town Square
 
 A town area.
 
 The town square of Cihan. There is a lot of hustle and bustle with activity as people go about their lives.
 
-### Cihan tavern
+
+
+
+
+
+
+### Cell the Armorweaver
+
+A store area.
+
+The foremost armor shop in Cihan. Cell has run this shop for years and his son is his apprentice.
+
+The store is very plain, not messing around. There is room for 4 people to browse around and shop.
+
+
+
+## NPCs
+
+#### Cell
+
+A Feline Armorweaver.
+
+Has the following items for sale:
+
+* Sandshoes (15 gold)
+* Sand Robe (5 gold)
+* Light Armor (40 gold)
+
+
+Dialogue:
+
+* [if there is a femme player character in the party] My son has been working on some armor you may find useful. You should talk with him and see if he'll part with it. It'll probably do wonders for your charm~ (purr)
+
+
+
+#### Cell's son Cial
+
+A Feline Apprentice Armorweaver.
+
+Has the following items for sale:
+
+* Maiden armor (30 gold)
+
+
+Dialogue:
+
+* I've been learning armorweaving for 5 years. I have a long way to go.
+* If you find any enchanted amulets you don't want, let me know. If you can find one that I'm really looking for I will pay a pretty penny.
+
+
+
+
+
+
+### The Flying Ombudsman
 
 A town area.
 
 The lively tavern of Cihan, there is a staircase on the northwest side of the building to the town inn.
 
-### Cihan inn
+
+
+
+
+
+
+### Cihan Inn
 
 A town area.
 
 The inn of Cihan, you can stay here for 5 gold per night, or maybe for less if you're lucky.
+
+
+
+
+
+
 
 
 ## Monsters
@@ -175,13 +247,15 @@ Buy price: 40 gold
 
 Unsellable
 
-### Maiden Armor
+### Maiden armor
 
 Armor (legendary item) 
 
 Weight: 1
 
 Attractive armor for an attractive woman.
+
+Gives you extra charisma in town areas, but it may also make you appear more femme to certain people.
 
 Grants the following bonuses:
 
@@ -199,12 +273,12 @@ Armor (legendary item)
 
 Weight: 1
 
-Armor fit for a goddess. Gives massive bonuses for defense and charisma to felines.
+Armor fit for a goddess. Gives massive bonuses for defense and charisma to felines. Can cause the wearer to be mistaken as high society member.
 
 Grants the following bonuses:
 
 * Grants +2 CHA
-* Grants +2 DEF
+* Grants +4 DEF
 
 
 Buy price: 300 gold
@@ -524,7 +598,7 @@ Has a maximum of 1 charges.
 
 Weight: 1
 
-A sweet fruit from a cactus.
+A sweet fruit from a cactus. You can juice them to act as emergency water.
 
 Grants the following bonuses:
 
