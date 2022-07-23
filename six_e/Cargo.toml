@@ -12,7 +12,7 @@ dnd_dice_roller = "0.3"
 log = "0"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-serde_dhall = "0.8"
+serde_dhall = "0.10"
 
 [dev-dependencies]
 criterion = "0.3"
